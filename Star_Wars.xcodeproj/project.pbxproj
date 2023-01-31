@@ -13,6 +13,8 @@
 		F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468B29868F6E0054C3B3 /* Main.storyboard */; };
 		F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468E29868F700054C3B3 /* Assets.xcassets */; };
 		F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */; };
+		F3F646A629879A590054C3B3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3F646A529879A590054C3B3 /* SnapKit */; };
+		F3F646A829879CAF0054C3B3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F646A729879CAF0054C3B3 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		F3F6468E29868F700054C3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F6469129868F700054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3F6469329868F700054C3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F646A729879CAF0054C3B3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F646A629879A590054C3B3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +62,22 @@
 			children = (
 				F3F6468529868F6E0054C3B3 /* AppDelegate.swift */,
 				F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */,
-				F3F6468929868F6E0054C3B3 /* ViewController.swift */,
+				F3F646A929888BE40054C3B3 /* FirstScreen */,
 				F3F6468B29868F6E0054C3B3 /* Main.storyboard */,
 				F3F6468E29868F700054C3B3 /* Assets.xcassets */,
 				F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */,
 				F3F6469329868F700054C3B3 /* Info.plist */,
 			);
 			path = Star_Wars;
+			sourceTree = "<group>";
+		};
+		F3F646A929888BE40054C3B3 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F3F6468929868F6E0054C3B3 /* ViewController.swift */,
+				F3F646A729879CAF0054C3B3 /* View.swift */,
+			);
+			path = FirstScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +96,9 @@
 			dependencies = (
 			);
 			name = Star_Wars;
+			packageProductDependencies = (
+				F3F646A529879A590054C3B3 /* SnapKit */,
+			);
 			productName = Star_Wars;
 			productReference = F3F6468229868F6E0054C3B3 /* Star_Wars.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = F3F6467929868F6E0054C3B3;
+			packageReferences = (
+				F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F3F6468329868F6E0054C3B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F646A829879CAF0054C3B3 /* View.swift in Sources */,
 				F3F6468A29868F6E0054C3B3 /* ViewController.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
@@ -293,8 +313,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +324,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "shift.Star-Wars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +346,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "shift.Star-Wars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3F646A529879A590054C3B3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3F6467A29868F6E0054C3B3 /* Project object */;
 }

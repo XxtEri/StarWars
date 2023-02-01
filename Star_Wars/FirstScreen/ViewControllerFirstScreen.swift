@@ -76,7 +76,7 @@ class ViewControllerFirstScreen: UIViewController {
         self.buttonView = UIImageView()
         self.buttonView.image = UIImage(named: "Allow")
         self.buttonView.isUserInteractionEnabled = true
-        self.buttonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buttonIsPressed(sender:))))
+        self.buttonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(performDisplaySecondVC(paramSender:))))
     }
     
     func addConstraintsStack() {
@@ -112,7 +112,7 @@ class ViewControllerFirstScreen: UIViewController {
         })
     }
     
-    @objc func buttonIsPressed(sender: UIImageView) {
-        print("Pressed")
+    @objc func performDisplaySecondVC(paramSender: UIImageView) {
+        //self.navigationController?.pushViewController(ViewControllerMainScreen(), animated: true)
     }
 }

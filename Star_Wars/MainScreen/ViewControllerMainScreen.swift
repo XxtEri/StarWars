@@ -37,7 +37,8 @@ class ViewControllerMainScreen: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CardCell")
+        self.collectionView.register(UINib.init(nibName: "CustomCardCell", bundle: nil), forCellWithReuseIdentifier: "CustomCardCell")
+        //collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CardCell")
     }
     
     func addConstraints() {
@@ -65,18 +66,11 @@ extension ViewControllerMainScreen: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCardCell", for: indexPath) as? CustomCardCell else { return UICollectionViewCell()}
         
-        guard let new_cell = cell as? CustomCardCell else {
-            cell.backgroundColor = .red
-            cell.layer.cornerRadius = 50
-            
-            return cell
-        }
+        cell.configure(with: Card(title: self.namesBlocks[indexPath.row], imageName: self.namesBlocks[indexPath.row]), numberCard: indexPath.row)
         
-        new_cell.configure(with: Card(title: self.namesBlocks[indexPath.row], imageName: self.namesBlocks[indexPath.row]))
-        
-        return new_cell
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath ) -> CGSize {

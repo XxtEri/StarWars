@@ -13,7 +13,7 @@
 		F37BD705298A1EEE00D197EA /* CustomCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37BD703298A1EEE00D197EA /* CustomCardCell.xib */; };
 		F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468529868F6E0054C3B3 /* AppDelegate.swift */; };
 		F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */; };
-		F3F6468A29868F6E0054C3B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468929868F6E0054C3B3 /* ViewController.swift */; };
+		F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */; };
 		F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468B29868F6E0054C3B3 /* Main.storyboard */; };
 		F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468E29868F700054C3B3 /* Assets.xcassets */; };
 		F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */; };
@@ -29,7 +29,7 @@
 		F3F6468229868F6E0054C3B3 /* Star_Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star_Wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F6468529868F6E0054C3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3F6468929868F6E0054C3B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFirstScreen.swift; sourceTree = "<group>"; };
 		F3F6468C29868F6E0054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F6468E29868F700054C3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F6469129868F700054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		F3F646A929888BE40054C3B3 /* FirstScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F3F6468929868F6E0054C3B3 /* ViewController.swift */,
+				F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */,
 				F3F646A729879CAF0054C3B3 /* View.swift */,
 			);
 			path = FirstScreen;
@@ -204,7 +204,7 @@
 			files = (
 				F3F646A829879CAF0054C3B3 /* View.swift in Sources */,
 				F37BD701298A1EA400D197EA /* Card.swift in Sources */,
-				F3F6468A29868F6E0054C3B3 /* ViewController.swift in Sources */,
+				F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */,
 				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
 				F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,

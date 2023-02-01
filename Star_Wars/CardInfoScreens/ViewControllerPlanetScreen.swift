@@ -8,7 +8,22 @@
 import UIKit
 import SnapKit
 
+enum titleScreen: String {
+    case characters = "CHARACTERS"
+    case films = "FILMS"
+    case planets = "PLANETS"
+    case species = "SPECIES"
+    case starships = "STARSHIPS"
+    case vehicles = "VEHICLES"
+}
+
 class ViewControllerPlanetScreen: UIViewController {
+    
+    var titleBlock: titleScreen = .films
+    
+    var cardArray: [String] = {
+        return ["Ivan", "Lily", "Elena", "Maxim", "Igor", "Masha"]
+    }()
     
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -22,9 +37,9 @@ class ViewControllerPlanetScreen: UIViewController {
         return view
     }()
     
-    lazy var titleScreen: UILabel = {
+    lazy var titleScreenLabel: UILabel = {
         let label = UILabel()
-        label.text = "PLANETS"
+        label.text = titleBlock.rawValue
         label.textColor = .yellow
         label.textAlignment = .center
         label.font = UIFont(name: label.font.fontName, size: 35)
@@ -48,7 +63,7 @@ class ViewControllerPlanetScreen: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .black
-        self.view.addSubview(titleScreen)
+        self.view.addSubview(titleScreenLabel)
         self.view.addSubview(collectionView)
         
         collectionView.backgroundColor = .black
@@ -57,14 +72,14 @@ class ViewControllerPlanetScreen: UIViewController {
     }
     
     func addConstraints() {
-        titleScreen.snp.makeConstraints({ make in
+        titleScreenLabel.snp.makeConstraints({ make in
             make.top.equalToSuperview().inset(76.26)
             make.leading.trailing.equalToSuperview().inset(5)
             make.bottom.equalTo(collectionView.snp.top).inset(-45)
         })
         
         collectionView.snp.makeConstraints({ make in
-            make.top.equalTo(titleScreen.snp.bottom)
+            make.top.equalTo(titleScreenLabel.snp.bottom)
             make.trailing.leading.equalToSuperview()
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
         })
@@ -73,13 +88,13 @@ class ViewControllerPlanetScreen: UIViewController {
 
 extension ViewControllerPlanetScreen: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        Constants.itemsCount
+        self.cardArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomPlanetCell.reuseIdentifier, for: indexPath) as? CustomPlanetCell else { return UICollectionViewCell()}
         
-        cell.configure(with: Planet(title: "Characters", imageName: "Characters"))
+        cell.configure(with: Planet(title: self.cardArray[indexPath.row], imageName: self.cardArray[indexPath.row]))
         
         return cell
     }

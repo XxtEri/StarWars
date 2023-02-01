@@ -13,18 +13,8 @@ class ModelView {
     
     @Published var listFilms: [Film] = []
     
-    func fetchCharacters() {
-        let url = self.baseURl + "people"
-        
-        AF.request(url,
-                   method: .get,
-                   parameters: nil).responseData { response in
-            
-        }
-    }
-    
-    func fetchFilms() {
-        let url = self.baseURl + "films"
+    func fetchFilms(title: String) {
+        let url = self.baseURl + title.lowercased()
         
         AF.request(url,
                    method: .get,

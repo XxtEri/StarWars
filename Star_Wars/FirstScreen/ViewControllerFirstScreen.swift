@@ -110,8 +110,8 @@ class ViewControllerFirstScreen: UIViewController {
     }
     
     @objc func performDisplaySecondVC(paramSender: UIImageView) {
-        let view = ViewControllerMainScreen()
-        view.navigationItem.setHidesBackButton(true, animated: false)
-        self.navigationController?.pushViewController(view, animated: true)
+        //let view = ViewControllerMainScreen()
+        //view.navigationItem.setHidesBackButton(true, animated: false)
+        //self.navigationController?.pushViewController(view, animated: true)
     }
 }

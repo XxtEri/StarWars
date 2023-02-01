@@ -14,7 +14,7 @@ final class CustomPlanetCell: UICollectionViewCell {
     
     lazy var imagePlanet: UIImageView = {
         var imageView = UIImageView(frame: .zero)
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView

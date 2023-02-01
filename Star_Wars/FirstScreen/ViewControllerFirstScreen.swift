@@ -96,9 +96,8 @@ class ViewControllerFirstScreen: UIViewController {
     
     func addConstraintsTextLabel() {
         textLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(33).constraint.isActive = true
-            make.trailing.equalToSuperview().inset(32).constraint.isActive = true
-            make.top.equalTo(imageView.snp_bottomMargin).inset(-198).constraint.isActive = true
+            make.trailing.leading.equalToSuperview().inset(32)
+            make.top.equalTo(imageView.snp_bottomMargin).inset(-198)
         }
     }
     
@@ -113,6 +112,7 @@ class ViewControllerFirstScreen: UIViewController {
     }
     
     @objc func performDisplaySecondVC(paramSender: UIImageView) {
-        //self.navigationController?.pushViewController(ViewControllerMainScreen(), animated: true)
+        print("Press")
+        self.navigationController?.pushViewController(ViewControllerMainScreen(), animated: true)
     }
 }

@@ -14,9 +14,10 @@
 		F37BD708298A364C00D197EA /* ViewControllerPlanetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */; };
 		F37BD70C298A37AC00D197EA /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70B298A37AB00D197EA /* Planet.swift */; };
 		F37BD711298A38B900D197EA /* CustomPlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */; };
-		F37BD712298A38B900D197EA /* CustomPlanetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37BD710298A38B900D197EA /* CustomPlanetCell.xib */; };
 		F37BD718298A4F4E00D197EA /* ViewControllerCardInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD717298A4F4E00D197EA /* ViewControllerCardInfoScreen.swift */; };
 		F37BD71C298A503700D197EA /* ViewControllerMustafar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71B298A503700D197EA /* ViewControllerMustafar.swift */; };
+		F37BD71F298A515E00D197EA /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71E298A515E00D197EA /* ModelView.swift */; };
+		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
 		F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468529868F6E0054C3B3 /* AppDelegate.swift */; };
 		F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */; };
 		F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */; };
@@ -35,9 +36,9 @@
 		F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlanetScreen.swift; sourceTree = "<group>"; };
 		F37BD70B298A37AB00D197EA /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlanetCell.swift; sourceTree = "<group>"; };
-		F37BD710298A38B900D197EA /* CustomPlanetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPlanetCell.xib; sourceTree = "<group>"; };
 		F37BD717298A4F4E00D197EA /* ViewControllerCardInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCardInfoScreen.swift; sourceTree = "<group>"; };
 		F37BD71B298A503700D197EA /* ViewControllerMustafar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMustafar.swift; sourceTree = "<group>"; };
+		F37BD71E298A515E00D197EA /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		F3F6468229868F6E0054C3B3 /* Star_Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star_Wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F6468529868F6E0054C3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F646A629879A590054C3B3 /* SnapKit in Frameworks */,
+				F37BD722298A529F00D197EA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */,
-				F37BD710298A38B900D197EA /* CustomPlanetCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +150,14 @@
 			path = Mustafar;
 			sourceTree = "<group>";
 		};
+		F37BD71D298A514100D197EA /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				F37BD71E298A515E00D197EA /* ModelView.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		F3F6467929868F6E0054C3B3 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +177,7 @@
 		F3F6468429868F6E0054C3B3 /* Star_Wars */ = {
 			isa = PBXGroup;
 			children = (
+				F37BD71D298A514100D197EA /* ModelView */,
 				F37BD6FA298A1DA300D197EA /* Application */,
 				F3F646A929888BE40054C3B3 /* FirstScreen */,
 				F37BD6FB298A1DC000D197EA /* MainScreen */,
@@ -208,6 +218,7 @@
 			name = Star_Wars;
 			packageProductDependencies = (
 				F3F646A529879A590054C3B3 /* SnapKit */,
+				F37BD721298A529F00D197EA /* Alamofire */,
 			);
 			productName = Star_Wars;
 			productReference = F3F6468229868F6E0054C3B3 /* Star_Wars.app */;
@@ -239,6 +250,7 @@
 			mainGroup = F3F6467929868F6E0054C3B3;
 			packageReferences = (
 				F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F37BD720298A529F00D197EA /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = F3F6468329868F6E0054C3B3 /* Products */;
 			projectDirPath = "";
@@ -254,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F37BD712298A38B900D197EA /* CustomPlanetCell.xib in Resources */,
 				F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */,
 				F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */,
 				F37BD705298A1EEE00D197EA /* CustomCardCell.xib in Resources */,
@@ -274,6 +285,7 @@
 				F37BD701298A1EA400D197EA /* Card.swift in Sources */,
 				F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */,
 				F37BD718298A4F4E00D197EA /* ViewControllerCardInfoScreen.swift in Sources */,
+				F37BD71F298A515E00D197EA /* ModelView.swift in Sources */,
 				F37BD70C298A37AC00D197EA /* Planet.swift in Sources */,
 				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
 				F37BD708298A364C00D197EA /* ViewControllerPlanetScreen.swift in Sources */,
@@ -510,6 +522,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F37BD720298A529F00D197EA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -521,6 +541,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F37BD721298A529F00D197EA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F37BD720298A529F00D197EA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		F3F646A529879A590054C3B3 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */;

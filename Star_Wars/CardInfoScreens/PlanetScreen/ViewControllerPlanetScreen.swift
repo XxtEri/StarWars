@@ -9,8 +9,18 @@ import UIKit
 import SnapKit
 
 class ViewControllerPlanetScreen: UIViewController {
-
-    @IBOutlet weak var collectionView: UICollectionView!
+    
+    lazy var collectionView: UICollectionView = {
+        let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.delegate = self
+        view.dataSource = self
+        
+        view.register(CustomPlanetCell.self, forCellWithReuseIdentifier: CustomPlanetCell.reuseIdentifier)
+        
+        return view
+    }()
     
     lazy var titleScreen: UILabel = {
         let label = UILabel()
@@ -27,8 +37,11 @@ class ViewControllerPlanetScreen: UIViewController {
         static let itemsInRow = 1
         static let itemsCount = 6
         
-        static let lineSpace: CGFloat = 12
-        static let itemSpace: CGFloat = 12
+        static let viewInsets = UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
+        static let insets = UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
+        
+        static let lineSpace: CGFloat = 21
+        static let itemSpace: CGFloat = 21
     }
     
     override func viewDidLoad() {
@@ -36,13 +49,10 @@ class ViewControllerPlanetScreen: UIViewController {
         
         self.view.backgroundColor = .black
         self.view.addSubview(titleScreen)
-        //collectionView.backgroundColor = .black
+        self.view.addSubview(collectionView)
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        collectionView.register(UINib.init(nibName: "CustomPlanetCell", bundle: nil), forCellWithReuseIdentifier: "CustomPlanetCell")
-        
+        collectionView.backgroundColor = .black
+
         addConstraints()
     }
     
@@ -55,7 +65,8 @@ class ViewControllerPlanetScreen: UIViewController {
         
         collectionView.snp.makeConstraints({ make in
             make.top.equalTo(titleScreen.snp.bottom)
-            make.bottom.trailing.leading.equalToSuperview().inset(14)
+            make.trailing.leading.equalToSuperview()
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
         })
     }
 }
@@ -66,32 +77,27 @@ extension ViewControllerPlanetScreen: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomPlanetCell", for: indexPath) as? CustomPlanetCell else { return UICollectionViewCell()}
-        
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomPlanetCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomPlanetCell.reuseIdentifier, for: indexPath) as? CustomPlanetCell else { return UICollectionViewCell()}
         
         cell.configure(with: Planet(title: "Characters", imageName: "Characters"))
-        //cell.backgroundColor = UIColor.red
-        cell.layer.cornerRadius = 50
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath ) -> CGSize {
         
-        //let sideInsets = (Constants.insets.left + Constants.viewInsets.left) * 2
-        let insetsSum = Constants.itemSpace * (CGFloat(Constants.itemsInRow) - 1)
-        //+ sideInsets
+        let sideInsets = (Constants.insets.left + Constants.viewInsets.left) * 2
+        let insetsSum = Constants.itemSpace * (CGFloat(Constants.itemsInRow) - 1) + sideInsets
         let otherSpace = collectionView.frame.width - insetsSum
         let cellWidth = otherSpace / CGFloat(Constants.itemsInRow)
         
         return CGSize(width: cellWidth, height: 65)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//
-//        Constants.insets
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        Constants.insets
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         

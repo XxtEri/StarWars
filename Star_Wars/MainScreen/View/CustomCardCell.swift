@@ -13,7 +13,7 @@ class CustomCardCell: UICollectionViewCell {
     static let reuseIdentifier = "CusromCardCell"
     
     private let colors: [UIColor] = [.red, .yellow,
-                                     .white, .black,
+                                     .white, .blue,
                                  .yellow, .red]
     
     lazy var titleCard: UILabel = {

@@ -31,7 +31,7 @@ class ViewControllerMainScreen: UIViewController {
         static let itemsCount = 6
         
         static let viewInsets = UIEdgeInsets(top: 0, left: 11, bottom: 0, right: 11)
-        static let insets = UIEdgeInsets(top: 101.26, left: 11, bottom: 0, right: 10)
+        static let insets = UIEdgeInsets(top: UIScreen.main.bounds.size.height / 12, left: 11, bottom: 0, right: 10)
         static let lineSpace: CGFloat = 23
         static let itemSpace: CGFloat = 46
     }

@@ -12,7 +12,7 @@ import SnapKit
 class ViewControllerFirstScreen: UIViewController {
     
     var stack: UIStackView = {
-        let view = UIStackView(frame: UIScreen.main.bounds)
+        let view = UIStackView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -102,8 +102,7 @@ class ViewControllerFirstScreen: UIViewController {
     
     func addConstraintsButtonView() {
         buttonView.snp.makeConstraints({make in
-            make.width.equalTo(150)
-            make.height.equalTo(150)
+            make.width.height.equalTo(150)
             make.trailing.equalToSuperview()
             make.bottom.greaterThanOrEqualToSuperview().inset(63)
             make.top.equalTo(self.textLabel.snp_bottomMargin)
@@ -111,7 +110,6 @@ class ViewControllerFirstScreen: UIViewController {
     }
     
     @objc func performDisplaySecondVC(paramSender: UIImageView) {
-        print("Press")
         let view = ViewControllerMainScreen()
         view.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationController?.pushViewController(view, animated: true)

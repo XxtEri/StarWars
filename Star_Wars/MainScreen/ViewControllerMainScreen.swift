@@ -11,6 +11,13 @@ class ViewControllerMainScreen: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+//    lazy var collectionView: UICollectionView = {
+//        var view = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: UICollectionViewLayout())
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//
+//        return view
+//    }()
+    
     private let namesBlocks = ["Characters", "Films",
                            "Starships", "Vehicles",
                            "Planets", "Species"]
@@ -27,18 +34,14 @@ class ViewControllerMainScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: UICollectionViewLayout())
-        //collectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        //self.view.addSubview(collectionView)
-        //addConstraints()
+//        self.view.addSubview(collectionView)
+//        addConstraints()
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
         self.collectionView.register(UINib.init(nibName: "CustomCardCell", bundle: nil), forCellWithReuseIdentifier: "CustomCardCell")
-        //collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CardCell")
     }
     
     func addConstraints() {
@@ -46,18 +49,6 @@ class ViewControllerMainScreen: UIViewController {
                 make.leading.trailing.bottom.top.equalToSuperview()
             })
         }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ViewControllerMainScreen: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

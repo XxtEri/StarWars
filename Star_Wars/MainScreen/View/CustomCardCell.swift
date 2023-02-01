@@ -17,7 +17,7 @@ class CustomCardCell: UICollectionViewCell {
     lazy var titleCard: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: label.font.fontName, size: 40)
+        label.font = UIFont(name: label.font.fontName, size: 30)
         label.textAlignment = .center
         
         return label

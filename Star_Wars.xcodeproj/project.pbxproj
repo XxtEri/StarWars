@@ -10,7 +10,6 @@
 		F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */; };
 		F37BD701298A1EA400D197EA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD700298A1EA400D197EA /* Card.swift */; };
 		F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD702298A1EEE00D197EA /* CustomCardCell.swift */; };
-		F37BD705298A1EEE00D197EA /* CustomCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37BD703298A1EEE00D197EA /* CustomCardCell.xib */; };
 		F37BD708298A364C00D197EA /* ViewControllerPlanetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */; };
 		F37BD70C298A37AC00D197EA /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70B298A37AB00D197EA /* Planet.swift */; };
 		F37BD711298A38B900D197EA /* CustomPlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */; };
@@ -32,7 +31,6 @@
 		F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainScreen.swift; sourceTree = "<group>"; };
 		F37BD700298A1EA400D197EA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F37BD702298A1EEE00D197EA /* CustomCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardCell.swift; sourceTree = "<group>"; };
-		F37BD703298A1EEE00D197EA /* CustomCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCardCell.xib; sourceTree = "<group>"; };
 		F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlanetScreen.swift; sourceTree = "<group>"; };
 		F37BD70B298A37AB00D197EA /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlanetCell.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				F37BD702298A1EEE00D197EA /* CustomCardCell.swift */,
-				F37BD703298A1EEE00D197EA /* CustomCardCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 			files = (
 				F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */,
 				F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */,
-				F37BD705298A1EEE00D197EA /* CustomCardCell.xib in Resources */,
 				F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

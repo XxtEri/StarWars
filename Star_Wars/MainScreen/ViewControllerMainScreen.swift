@@ -6,47 +6,50 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewControllerMainScreen: UIViewController {
-
-    @IBOutlet weak var collectionView: UICollectionView!
     
-//    lazy var collectionView: UICollectionView = {
-//        var view = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: UICollectionViewLayout())
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//
-//        return view
-//    }()
+    lazy var collectionView: UICollectionView = {
+        var view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.delegate = self
+        view.dataSource = self
+        
+        view.register(CustomCardCell.self, forCellWithReuseIdentifier: CustomCardCell.reuseIdentifier)
+
+        return view
+    }()
     
     private let namesBlocks = ["Characters", "Films",
                            "Starships", "Vehicles",
                            "Planets", "Species"]
     
     private enum Constants {
-            static let itemsInRow = 2
-            static let itemsCount = 6
-            
-            static let viewInsets = UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 8)
-            static let insets = UIEdgeInsets(top: 101.26, left: 22, bottom: 12, right: 21)
-            static let lineSpace: CGFloat = 12
-            static let itemSpace: CGFloat = 46
-        }
+        static let itemsInRow = 2
+        static let itemsCount = 6
+        
+        static let viewInsets = UIEdgeInsets(top: 0, left: 11, bottom: 0, right: 11)
+        static let insets = UIEdgeInsets(top: 101.26, left: 11, bottom: 0, right: 10)
+        static let lineSpace: CGFloat = 23
+        static let itemSpace: CGFloat = 46
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.addSubview(collectionView)
-//        addConstraints()
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        self.collectionView.register(UINib.init(nibName: "CustomCardCell", bundle: nil), forCellWithReuseIdentifier: "CustomCardCell")
+        self.view.backgroundColor = .black
+        self.view.addSubview(collectionView)
+        collectionView.backgroundColor = .black
+        addConstraints()
     }
     
     func addConstraints() {
             self.collectionView.snp.makeConstraints({ make in
-                make.leading.trailing.bottom.top.equalToSuperview()
+                make.leading.trailing.equalToSuperview()
+                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
             })
         }
 }
@@ -57,7 +60,7 @@ extension ViewControllerMainScreen: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCardCell", for: indexPath) as? CustomCardCell else { return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCardCell.reuseIdentifier, for: indexPath) as? CustomCardCell else { return UICollectionViewCell()}
         
         cell.configure(with: Card(title: self.namesBlocks[indexPath.row], imageName: self.namesBlocks[indexPath.row]), numberCard: indexPath.row)
         

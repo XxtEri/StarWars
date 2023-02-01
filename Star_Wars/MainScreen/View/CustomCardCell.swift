@@ -10,6 +10,8 @@ import SnapKit
 
 class CustomCardCell: UICollectionViewCell {
     
+    static let reuseIdentifier = "CusromCardCell"
+    
     private let colors: [UIColor] = [.red, .yellow,
                                      .white, .black,
                                  .yellow, .red]
@@ -17,26 +19,32 @@ class CustomCardCell: UICollectionViewCell {
     lazy var titleCard: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: label.font.fontName, size: 30)
+        label.font = UIFont(name: label.font.fontName, size: 20)
         label.textAlignment = .center
+        label.backgroundColor = .black.withAlphaComponent(0.5)
         
         return label
     }()
     
     lazy var imageCard: UIImageView = {
-        var imageView = UIImageView()
+        var imageView = UIImageView(frame: .zero)
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         self.addSubview(imageCard)
         self.addSubview(titleCard)
         
         setConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setConstraints() {

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */; };
+		F37BD701298A1EA400D197EA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD700298A1EA400D197EA /* Card.swift */; };
+		F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD702298A1EEE00D197EA /* CustomCardCell.swift */; };
+		F37BD705298A1EEE00D197EA /* CustomCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37BD703298A1EEE00D197EA /* CustomCardCell.xib */; };
 		F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468529868F6E0054C3B3 /* AppDelegate.swift */; };
 		F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */; };
 		F3F6468A29868F6E0054C3B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468929868F6E0054C3B3 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainScreen.swift; sourceTree = "<group>"; };
+		F37BD700298A1EA400D197EA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F37BD702298A1EEE00D197EA /* CustomCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardCell.swift; sourceTree = "<group>"; };
+		F37BD703298A1EEE00D197EA /* CustomCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCardCell.xib; sourceTree = "<group>"; };
 		F3F6468229868F6E0054C3B3 /* Star_Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star_Wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F6468529868F6E0054C3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F37BD6FA298A1DA300D197EA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F3F6468529868F6E0054C3B3 /* AppDelegate.swift */,
+				F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F37BD6FB298A1DC000D197EA /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */,
+				F37BD6FC298A1DD700D197EA /* Model */,
+				F37BD6FD298A1DE800D197EA /* View */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		F37BD6FC298A1DD700D197EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F37BD700298A1EA400D197EA /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F37BD6FD298A1DE800D197EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F37BD702298A1EEE00D197EA /* CustomCardCell.swift */,
+				F37BD703298A1EEE00D197EA /* CustomCardCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F3F6467929868F6E0054C3B3 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +104,12 @@
 		F3F6468429868F6E0054C3B3 /* Star_Wars */ = {
 			isa = PBXGroup;
 			children = (
-				F3F6468529868F6E0054C3B3 /* AppDelegate.swift */,
-				F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */,
+				F37BD6FA298A1DA300D197EA /* Application */,
 				F3F646A929888BE40054C3B3 /* FirstScreen */,
+				F37BD6FB298A1DC000D197EA /* MainScreen */,
 				F3F6468B29868F6E0054C3B3 /* Main.storyboard */,
-				F3F6468E29868F700054C3B3 /* Assets.xcassets */,
 				F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */,
+				F3F6468E29868F700054C3B3 /* Assets.xcassets */,
 				F3F6469329868F700054C3B3 /* Info.plist */,
 			);
 			path = Star_Wars;
@@ -146,6 +190,7 @@
 			files = (
 				F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */,
 				F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */,
+				F37BD705298A1EEE00D197EA /* CustomCardCell.xib in Resources */,
 				F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F646A829879CAF0054C3B3 /* View.swift in Sources */,
+				F37BD701298A1EA400D197EA /* Card.swift in Sources */,
 				F3F6468A29868F6E0054C3B3 /* ViewController.swift in Sources */,
+				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
+				F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
 			);

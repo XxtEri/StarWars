@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 //FirstScreen
-class ViewController: UIViewController {
+class ViewControllerFirstScreen: UIViewController {
     
     var stack: UIStackView = {
         let view = UIStackView(frame: UIScreen.main.bounds)

@@ -16,13 +16,13 @@ struct Specie: Decodable {
     let hair_colors: String
     let eye_colors: String
     let average_lifespan: String
-    let homeworld: Link
+    let homeworld: String
     let language: String
-    let people: [Link]
-    let films: [Link]
+    let people: [String]
+    let films: [String]
     let created: String
     let edited: String
-    let url: Link
+    let url: String
 }
 
 struct InfoSpecies: Decodable {

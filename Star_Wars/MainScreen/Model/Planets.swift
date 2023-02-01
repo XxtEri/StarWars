@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Planet: Decodable {
+struct PlanetModel: Decodable {
     let name: String
     let rotation_period: String
     let orbital_period: String
@@ -28,5 +28,5 @@ struct InfoPlanets: Decodable {
     let count: Int
     let next: String?
     let previous: String?
-    let results: [Planet]
+    let results: [PlanetModel]
 }

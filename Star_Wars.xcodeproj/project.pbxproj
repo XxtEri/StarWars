@@ -19,7 +19,7 @@
 		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
 		F37BD724298A90EB00D197EA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD723298A90EB00D197EA /* Film.swift */; };
 		F37BD726298A933700D197EA /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD725298A933700D197EA /* Specie.swift */; };
-		F37BD72A298A947300D197EA /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD729298A947300D197EA /* Planet.swift */; };
+		F37BD72A298A947300D197EA /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD729298A947300D197EA /* Planets.swift */; };
 		F37BD72E298A960600D197EA /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD72D298A960600D197EA /* Starship.swift */; };
 		F37BD730298A96D400D197EA /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD72F298A96D400D197EA /* Vehicles.swift */; };
 		F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468529868F6E0054C3B3 /* AppDelegate.swift */; };
@@ -44,7 +44,7 @@
 		F37BD71E298A515E00D197EA /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F37BD725298A933700D197EA /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
-		F37BD729298A947300D197EA /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		F37BD729298A947300D197EA /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
 		F37BD72D298A960600D197EA /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		F37BD72F298A96D400D197EA /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		F3F6468229868F6E0054C3B3 /* Star_Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star_Wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +96,7 @@
 				F37BD700298A1EA400D197EA /* Card.swift */,
 				F37BD723298A90EB00D197EA /* Film.swift */,
 				F37BD725298A933700D197EA /* Specie.swift */,
-				F37BD729298A947300D197EA /* Planet.swift */,
+				F37BD729298A947300D197EA /* Planets.swift */,
 				F37BD72D298A960600D197EA /* Starship.swift */,
 				F37BD72F298A96D400D197EA /* Vehicles.swift */,
 			);
@@ -301,7 +301,7 @@
 				F37BD70C298A37AC00D197EA /* Planet.swift in Sources */,
 				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
 				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
-				F37BD72A298A947300D197EA /* Planet.swift in Sources */,
+				F37BD72A298A947300D197EA /* Planets.swift in Sources */,
 				F37BD708298A364C00D197EA /* ViewControllerPlanetScreen.swift in Sources */,
 				F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,

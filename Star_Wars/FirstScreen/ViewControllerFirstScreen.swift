@@ -87,8 +87,7 @@ class ViewControllerFirstScreen: UIViewController {
     
     func addConstraintsImageView() {
         imageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
+            make.trailing.leading.equalToSuperview()
             make.top.equalToSuperview().inset(148)
             make.bottom.equalToSuperview().inset(399)
         }
@@ -113,6 +112,8 @@ class ViewControllerFirstScreen: UIViewController {
     
     @objc func performDisplaySecondVC(paramSender: UIImageView) {
         print("Press")
-        self.navigationController?.pushViewController(ViewControllerMainScreen(), animated: true)
+        let view = ViewControllerMainScreen()
+        view.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController?.pushViewController(view, animated: true)
     }
 }

@@ -41,9 +41,11 @@ class ViewControllerMainScreen: UIViewController {
         
         self.view.backgroundColor = .black
         self.view.addSubview(collectionView)
+        self.view.inputViewController?.navigationItem.hidesBackButton = true
         collectionView.backgroundColor = .black
         addConstraints()
     }
+    
     
     func addConstraints() {
             self.collectionView.snp.makeConstraints({ make in

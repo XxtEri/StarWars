@@ -66,5 +66,26 @@ class CustomCardCell: UICollectionViewCell {
         imageCard.image = image
         imageCard.layer.cornerRadius = 50
         imageCard.clipsToBounds = true
+        
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(request(paramSender:))))
     }
+    
+    @objc
+    func request(paramSender: Any) {
+        switch titleCard.text {
+        case titleScreen.characters.rawValue:
+            print("characters")
+        case titleScreen.films.rawValue:
+            print("films")
+        case titleScreen.planets.rawValue:
+            print("planets")
+        case titleScreen.species.rawValue:
+            print("species")
+        case titleScreen.vehicles.rawValue:
+            print("vehicles")
+        default:
+            print("non")
+        }
+    }
+
 }

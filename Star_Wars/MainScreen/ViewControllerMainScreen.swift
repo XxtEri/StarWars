@@ -22,9 +22,15 @@ class ViewControllerMainScreen: UIViewController {
         return view
     }()
     
-    private let namesBlocks = ["Characters", "Films",
-                           "Starships", "Vehicles",
-                           "Planets", "Species"]
+    private var listTitleCard: [String] = {
+        var array: [String] = []
+        
+        for title in titleScreen.allCases {
+            array.append(title.rawValue)
+        }
+        
+        return array
+    }()
     
     private enum Constants {
         static let itemsInRow = 2
@@ -64,7 +70,7 @@ extension ViewControllerMainScreen: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCardCell.reuseIdentifier, for: indexPath) as? CustomCardCell else { return UICollectionViewCell()}
         
-        cell.configure(with: Card(title: self.namesBlocks[indexPath.row], imageName: self.namesBlocks[indexPath.row]), numberCard: indexPath.row)
+        cell.configure(with: Card(title: listTitleCard[indexPath.row], imageName: listTitleCard[indexPath.row]), numberCard: indexPath.row)
         
         return cell
     }

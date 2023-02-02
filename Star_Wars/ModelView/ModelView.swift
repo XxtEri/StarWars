@@ -18,7 +18,7 @@ class ModelView {
         
         AF.request(url,
                    method: .get,
-                   parameters: nil).responseData { response in
+                   parameters: nil).responseData { [self] response in
             if let request = response.request {
                 print("Request: \(request)")
             }
@@ -31,7 +31,8 @@ class ModelView {
             case .success(let data):
                 do {
                     guard let decodeData = try? JSONDecoder().decode(InfoFilms.self, from: data) else { return }
-                    self.listFilms = decodeData.results
+                    listFilms = decodeData.results
+                    print(listFilms)
                     
                 } catch (let error) {
                     print(error.localizedDescription)
@@ -43,45 +44,5 @@ class ModelView {
             }
         }
         .resume()
-    }
-    
-    func fetchPlanets() {
-        let url = self.baseURl + "planets"
-        
-        AF.request(url,
-                   method: .get,
-                   parameters: nil).responseData { response in
-            
-        }
-    }
-    
-    func fetchSpecies() {
-        let url = self.baseURl + "species"
-        
-        AF.request(url,
-                   method: .get,
-                   parameters: nil).responseData { response in
-            
-        }
-    }
-    
-    func fetchStarships() {
-        let url = self.baseURl + "starships"
-        
-        AF.request(url,
-                   method: .get,
-                   parameters: nil).responseData { response in
-            
-        }
-    }
-    
-    func fetchVehicles() {
-        let url = self.baseURl + "vehicles"
-        
-        AF.request(url,
-                   method: .get,
-                   parameters: nil).responseData { response in
-            
-        }
     }
 }

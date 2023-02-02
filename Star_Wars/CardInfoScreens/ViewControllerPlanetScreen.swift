@@ -8,15 +8,6 @@
 import UIKit
 import SnapKit
 
-enum titleScreen: String {
-    case characters = "CHARACTERS"
-    case films = "FILMS"
-    case planets = "PLANETS"
-    case species = "SPECIES"
-    case starships = "STARSHIPS"
-    case vehicles = "VEHICLES"
-}
-
 class ViewControllerPlanetScreen: UIViewController {
     
     var titleBlock: titleScreen = .films

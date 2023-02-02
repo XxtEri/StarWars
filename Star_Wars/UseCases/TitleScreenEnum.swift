@@ -10,9 +10,19 @@ import Foundation
 enum TitleScreen: String, CaseIterable {
     case characters = "Characters"
     case films = "Films"
-    case planets = "Planets"
-    case species = "Species"
     case starships = "Starships"
     case vehicles = "Vehicles"
+    case planets = "Planets"
+    case species = "Species"
     case non = "Non"
+}
+
+enum CardType {
+    case characters([Character])
+    case films([Film])
+    case planets([Planet])
+    case species([Specie])
+    case starships([Starship])
+    case vehicles([Vehicle])
+    case non
 }

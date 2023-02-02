@@ -11,6 +11,8 @@
 		F347C12C298BB3C80035A90A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12B298BB3C80035A90A /* Character.swift */; };
 		F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */; };
 		F347C130298BCD160035A90A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12F298BCD160035A90A /* Card.swift */; };
+		F347C13C298BF11C0035A90A /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C13B298BF11C0035A90A /* Lexend-Bold.ttf */; };
+		F347C13F298BF12D0035A90A /* Spartan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C13E298BF12D0035A90A /* Spartan.ttf */; };
 		F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */; };
 		F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD702298A1EEE00D197EA /* CustomCardCell.swift */; };
 		F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */; };
@@ -38,6 +40,8 @@
 		F347C12B298BB3C80035A90A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovelViewCardScreen.swift; sourceTree = "<group>"; };
 		F347C12F298BCD160035A90A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F347C13B298BF11C0035A90A /* Lexend-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lexend-Bold.ttf"; path = "../../../../../../Downloads/Lexend/Lexend-Bold.ttf"; sourceTree = "<group>"; };
+		F347C13E298BF12D0035A90A /* Spartan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Spartan.ttf; path = ../../../../../../Downloads/Spartan/Spartan.ttf; sourceTree = "<group>"; };
 		F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainScreen.swift; sourceTree = "<group>"; };
 		F37BD702298A1EEE00D197EA /* CustomCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardCell.swift; sourceTree = "<group>"; };
 		F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCardScreen.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 				F347C129298B66F10035A90A /* TitleScreenEnum.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F347C13A298BF0F50035A90A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F347C13E298BF12D0035A90A /* Spartan.ttf */,
+				F347C13B298BF11C0035A90A /* Lexend-Bold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		F37BD6FA298A1DA300D197EA /* Application */ = {
@@ -182,6 +195,7 @@
 				F37BD71D298A514100D197EA /* ModelView */,
 				F37BD6FC298A1DD700D197EA /* Model */,
 				F347C128298B66C70035A90A /* UseCases */,
+				F347C13A298BF0F50035A90A /* Font */,
 				F3F6468B29868F6E0054C3B3 /* Main.storyboard */,
 				F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */,
 				F3F6468E29868F700054C3B3 /* Assets.xcassets */,
@@ -266,6 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */,
+				F347C13C298BF11C0035A90A /* Lexend-Bold.ttf in Resources */,
+				F347C13F298BF12D0035A90A /* Spartan.ttf in Resources */,
 				F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */,
 				F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */,
 			);

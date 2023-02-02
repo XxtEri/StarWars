@@ -26,6 +26,11 @@ class ViewControllerFirstScreen: UIViewController {
     var textLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "Explore the Star Wars universe"
+        view.font = UIFont(name: "Lexend-Bold", size: 24)
+        view.textColor = .white
+        view.textAlignment = .center
+        view.numberOfLines = .min
         
         return view
     }()
@@ -42,7 +47,6 @@ class ViewControllerFirstScreen: UIViewController {
         self.view.backgroundColor = .black
         
         createImageView()
-        createTextLabel()
         createButtonView()
         
         stack.addSubview(imageView)
@@ -61,14 +65,6 @@ class ViewControllerFirstScreen: UIViewController {
     func createImageView() {
         self.imageView = UIImageView()
         self.imageView.image = UIImage(named: "Logo")
-    }
-    
-    func createTextLabel() {
-        textLabel.text = "Explore the Star Wars universe"
-        textLabel.font = UIFont.boldSystemFont(ofSize: 24)
-        textLabel.textColor = .white
-        textLabel.textAlignment = .center
-        textLabel.numberOfLines = .min
     }
     
     func createButtonView() {

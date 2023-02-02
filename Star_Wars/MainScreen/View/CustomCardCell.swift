@@ -15,13 +15,13 @@ class CustomCardCell: UICollectionViewCell {
     private var modelView = ModelViewMainScreen()
     private var navigationController: UINavigationController? = nil
     private let colors: [UIColor] = [.red, .yellow,
-                                     .white, .blue,
+                                     .white, .init(red: 0, green: 130, blue: 200, alpha: 1),
                                  .yellow, .red]
     
     lazy var titleCard: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: label.font.fontName, size: 20)
+        label.font = UIFont(name: "Lexend-Bold", size: 16)
         label.textAlignment = .center
         label.backgroundColor = .black.withAlphaComponent(0.5)
         
@@ -36,6 +36,12 @@ class CustomCardCell: UICollectionViewCell {
         return imageView
     }()
     
+    override var isSelected: Bool {
+        didSet {
+            self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(request(paramSender:))))
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -48,6 +54,7 @@ class CustomCardCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     func setConstraints() {
         imageCard.snp.makeConstraints({ make in
@@ -66,11 +73,10 @@ class CustomCardCell: UICollectionViewCell {
         
         let image = UIImage(named: model.imageName)
         imageCard.image = image
-        imageCard.layer.cornerRadius = 50
-        imageCard.clipsToBounds = true
+        self.layer.cornerRadius = 50
+        self.clipsToBounds = true
 
         self.navigationController = navController
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(request(paramSender:))))
     }
     
     @objc
@@ -101,8 +107,6 @@ class CustomCardCell: UICollectionViewCell {
             print("non")
         }
         
-        modelView.fetch(title: view.titleBlock)
-        view.elementsCardArray = modelView.arrayElementsBlock as Array<AnyObject>
         view.navigationItem.setHidesBackButton(false, animated: false)
         self.navigationController?.pushViewController(view, animated: true)
     }

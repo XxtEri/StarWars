@@ -13,7 +13,7 @@
 		F37BD708298A364C00D197EA /* ViewControllerPlanetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */; };
 		F37BD70C298A37AC00D197EA /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70B298A37AB00D197EA /* Planet.swift */; };
 		F37BD711298A38B900D197EA /* CustomPlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */; };
-		F37BD71C298A503700D197EA /* ViewControllerMustafar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71B298A503700D197EA /* ViewControllerMustafar.swift */; };
+		F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */; };
 		F37BD71F298A515E00D197EA /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71E298A515E00D197EA /* ModelView.swift */; };
 		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
 		F37BD724298A90EB00D197EA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD723298A90EB00D197EA /* Film.swift */; };
@@ -39,7 +39,7 @@
 		F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlanetScreen.swift; sourceTree = "<group>"; };
 		F37BD70B298A37AB00D197EA /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlanetCell.swift; sourceTree = "<group>"; };
-		F37BD71B298A503700D197EA /* ViewControllerMustafar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMustafar.swift; sourceTree = "<group>"; };
+		F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfoElementCard.swift; sourceTree = "<group>"; };
 		F37BD71E298A515E00D197EA /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F37BD725298A933700D197EA /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
@@ -139,12 +139,12 @@
 			path = CardInfoScreens;
 			sourceTree = "<group>";
 		};
-		F37BD719298A4FFE00D197EA /* Mustafar */ = {
+		F37BD719298A4FFE00D197EA /* InfoElementCard */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD71B298A503700D197EA /* ViewControllerMustafar.swift */,
+				F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */,
 			);
-			path = Mustafar;
+			path = InfoElementCard;
 			sourceTree = "<group>";
 		};
 		F37BD71D298A514100D197EA /* ModelView */ = {
@@ -186,7 +186,7 @@
 				F3F646A929888BE40054C3B3 /* FirstScreen */,
 				F37BD6FB298A1DC000D197EA /* MainScreen */,
 				F37BD713298A4DB800D197EA /* CardInfoScreens */,
-				F37BD719298A4FFE00D197EA /* Mustafar */,
+				F37BD719298A4FFE00D197EA /* InfoElementCard */,
 				F3F6468B29868F6E0054C3B3 /* Main.storyboard */,
 				F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */,
 				F3F6468E29868F700054C3B3 /* Assets.xcassets */,
@@ -284,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F646A829879CAF0054C3B3 /* View.swift in Sources */,
-				F37BD71C298A503700D197EA /* ViewControllerMustafar.swift in Sources */,
+				F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */,
 				F37BD701298A1EA400D197EA /* Card.swift in Sources */,
 				F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */,
 				F37BD736298AA39200D197EA /* People.swift in Sources */,

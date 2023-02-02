@@ -13,7 +13,7 @@ class ModelView {
     
     @Published var listFilms: [Film] = []
     
-    func fetchFilms(title: String) {
+    func fetch(title: String) {
         let url = self.baseURl + title.lowercased()
         
         AF.request(url,

@@ -59,7 +59,6 @@ class ViewControllerFirstScreen: UIViewController {
     
     //MARK: -Method
     func createImageView() {
-        //узнать, как сделать, так, чтобы высота сама подбиралась
         self.imageView = UIImageView()
         self.imageView.image = UIImage(named: "Logo")
     }

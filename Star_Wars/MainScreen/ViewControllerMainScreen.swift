@@ -25,7 +25,7 @@ class ViewControllerMainScreen: UIViewController {
     private var listTitleCard: [String] = {
         var array: [String] = []
         
-        for title in titleScreen.allCases {
+        for title in TitleScreen.allCases {
             array.append(title.rawValue)
         }
         
@@ -54,12 +54,12 @@ class ViewControllerMainScreen: UIViewController {
     
     
     func addConstraints() {
-            self.collectionView.snp.makeConstraints({ make in
-                make.leading.trailing.equalToSuperview()
-                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
-                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-            })
-        }
+        self.collectionView.snp.makeConstraints({ make in
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+        })
+    }
 }
 
 extension ViewControllerMainScreen: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -70,7 +70,7 @@ extension ViewControllerMainScreen: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCardCell.reuseIdentifier, for: indexPath) as? CustomCardCell else { return UICollectionViewCell()}
         
-        cell.configure(with: Card(title: listTitleCard[indexPath.row], imageName: listTitleCard[indexPath.row]), numberCard: indexPath.row)
+        cell.configure(with: Card(title: listTitleCard[indexPath.row], imageName: listTitleCard[indexPath.row]), numberCard: indexPath.row, self.navigationController)
         
         return cell
     }

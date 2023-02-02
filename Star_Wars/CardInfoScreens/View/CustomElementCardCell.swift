@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class CustomPlanetCell: UICollectionViewCell {
+final class CustomElementCardCell: UICollectionViewCell {
     
     static let reuseIdentifier = "CustomPlanetCell"
     
@@ -85,8 +85,24 @@ final class CustomPlanetCell: UICollectionViewCell {
         self.layer.masksToBounds = true
     }
     
-    func configure(with model: Planet) {
-        self.titleCell.text = model.title
+    func configure(with model: AnyObject, _ titleBlock: TitleScreen) {
+        switch titleBlock {
+        case .films:
+            self.titleCell.text = model.name
+        case .characters:
+            print("")
+        case .planets:
+            print("")
+        case .species:
+            print("")
+        case .starships:
+            print("")
+        case .vehicles:
+            print("")
+        case .non:
+            print("")
+        }
+        //self.titleCell.text = model
     }
 
 }

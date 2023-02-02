@@ -12,6 +12,8 @@ class CustomCardCell: UICollectionViewCell {
     
     static let reuseIdentifier = "CusromCardCell"
     
+    private var modelView = ModelViewMainScreen()
+    private var navigationController: UINavigationController? = nil
     private let colors: [UIColor] = [.red, .yellow,
                                      .white, .blue,
                                  .yellow, .red]
@@ -58,7 +60,7 @@ class CustomCardCell: UICollectionViewCell {
         })
     }
 
-    func configure(with model: Card, numberCard: Int) {
+    func configure(with model: Card, numberCard: Int, _ navController: UINavigationController?) {
         titleCard.text = model.title
         titleCard.textColor = self.colors[numberCard]
         
@@ -66,26 +68,42 @@ class CustomCardCell: UICollectionViewCell {
         imageCard.image = image
         imageCard.layer.cornerRadius = 50
         imageCard.clipsToBounds = true
-        
+
+        self.navigationController = navController
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(request(paramSender:))))
     }
     
     @objc
     func request(paramSender: Any) {
+        let view = ViewControllerCardScreen()
+        
         switch titleCard.text {
-        case titleScreen.characters.rawValue:
+        case TitleScreen.characters.rawValue:
+            view.titleBlock = .characters
             print("characters")
-        case titleScreen.films.rawValue:
+        case TitleScreen.films.rawValue:
+            view.titleBlock = .films
             print("films")
-        case titleScreen.planets.rawValue:
+        case TitleScreen.planets.rawValue:
+            view.titleBlock = .planets
             print("planets")
-        case titleScreen.species.rawValue:
+        case TitleScreen.species.rawValue:
+            view.titleBlock = .species
             print("species")
-        case titleScreen.vehicles.rawValue:
+        case TitleScreen.vehicles.rawValue:
+            view.titleBlock = .vehicles
             print("vehicles")
+        case TitleScreen.starships.rawValue:
+            view.titleBlock = .starships
+            print("starships")
         default:
+            view.titleBlock = .non
             print("non")
         }
+        
+        modelView.fetch(title: view.titleBlock)
+        view.elementsCardArray = modelView.arrayElementsBlock as Array<AnyObject>
+        view.navigationItem.setHidesBackButton(false, animated: false)
+        self.navigationController?.pushViewController(view, animated: true)
     }
-
 }

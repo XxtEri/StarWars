@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Vehicle {
+struct Vehicle : Decodable {
     let name: String
     let model: String
     let manufacturer: String
@@ -26,7 +26,7 @@ struct Vehicle {
     let url: String
 }
 
-struct InfoVehicles {
+struct InfoVehicles : Decodable {
     let count: Int
     let next: String?
     let previous: String?

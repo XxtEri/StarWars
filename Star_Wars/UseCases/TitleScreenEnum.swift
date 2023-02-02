@@ -7,11 +7,12 @@
 
 import Foundation
 
-enum titleScreen: String, CaseIterable {
+enum TitleScreen: String, CaseIterable {
     case characters = "Characters"
     case films = "Films"
     case planets = "Planets"
     case species = "Species"
     case starships = "Starships"
     case vehicles = "Vehicles"
+    case non = "Non"
 }

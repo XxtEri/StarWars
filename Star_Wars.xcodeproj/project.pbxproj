@@ -8,21 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F347C12A298B66F10035A90A /* TitleScreenEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C129298B66F10035A90A /* TitleScreenEnum.swift */; };
+		F347C12C298BB3C80035A90A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12B298BB3C80035A90A /* Character.swift */; };
+		F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */; };
 		F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */; };
 		F37BD701298A1EA400D197EA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD700298A1EA400D197EA /* Card.swift */; };
 		F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD702298A1EEE00D197EA /* CustomCardCell.swift */; };
-		F37BD708298A364C00D197EA /* ViewControllerPlanetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */; };
+		F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */; };
 		F37BD70C298A37AC00D197EA /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70B298A37AB00D197EA /* Planet.swift */; };
-		F37BD711298A38B900D197EA /* CustomPlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */; };
+		F37BD711298A38B900D197EA /* CustomElementCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70F298A38B900D197EA /* CustomElementCardCell.swift */; };
 		F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */; };
-		F37BD71F298A515E00D197EA /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71E298A515E00D197EA /* ModelView.swift */; };
+		F37BD71F298A515E00D197EA /* ModelViewMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */; };
 		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
 		F37BD724298A90EB00D197EA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD723298A90EB00D197EA /* Film.swift */; };
 		F37BD726298A933700D197EA /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD725298A933700D197EA /* Specie.swift */; };
 		F37BD72A298A947300D197EA /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD729298A947300D197EA /* Planets.swift */; };
 		F37BD72E298A960600D197EA /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD72D298A960600D197EA /* Starship.swift */; };
 		F37BD730298A96D400D197EA /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD72F298A96D400D197EA /* Vehicles.swift */; };
-		F37BD736298AA39200D197EA /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD735298AA39200D197EA /* People.swift */; };
 		F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468529868F6E0054C3B3 /* AppDelegate.swift */; };
 		F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */; };
 		F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */; };
@@ -35,20 +36,21 @@
 
 /* Begin PBXFileReference section */
 		F347C129298B66F10035A90A /* TitleScreenEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenEnum.swift; sourceTree = "<group>"; };
+		F347C12B298BB3C80035A90A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovelViewCardScreen.swift; sourceTree = "<group>"; };
 		F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainScreen.swift; sourceTree = "<group>"; };
 		F37BD700298A1EA400D197EA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F37BD702298A1EEE00D197EA /* CustomCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardCell.swift; sourceTree = "<group>"; };
-		F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlanetScreen.swift; sourceTree = "<group>"; };
+		F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCardScreen.swift; sourceTree = "<group>"; };
 		F37BD70B298A37AB00D197EA /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
-		F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlanetCell.swift; sourceTree = "<group>"; };
+		F37BD70F298A38B900D197EA /* CustomElementCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElementCardCell.swift; sourceTree = "<group>"; };
 		F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfoElementCard.swift; sourceTree = "<group>"; };
-		F37BD71E298A515E00D197EA /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewMainScreen.swift; sourceTree = "<group>"; };
 		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F37BD725298A933700D197EA /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
 		F37BD729298A947300D197EA /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
 		F37BD72D298A960600D197EA /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		F37BD72F298A96D400D197EA /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
-		F37BD735298AA39200D197EA /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		F3F6468229868F6E0054C3B3 /* Star_Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star_Wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F6468529868F6E0054C3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				F37BD729298A947300D197EA /* Planets.swift */,
 				F37BD72D298A960600D197EA /* Starship.swift */,
 				F37BD72F298A96D400D197EA /* Vehicles.swift */,
+				F347C12B298BB3C80035A90A /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,7 +126,7 @@
 		F37BD709298A377C00D197EA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD70F298A38B900D197EA /* CustomPlanetCell.swift */,
+				F37BD70F298A38B900D197EA /* CustomElementCardCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,9 +134,7 @@
 		F37BD70A298A379200D197EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD737298AA9C500D197EA /* UseCases */,
 				F37BD70B298A37AB00D197EA /* Planet.swift */,
-				F37BD735298AA39200D197EA /* People.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,7 +142,7 @@
 		F37BD713298A4DB800D197EA /* CardInfoScreens */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD707298A364C00D197EA /* ViewControllerPlanetScreen.swift */,
+				F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */,
 				F37BD709298A377C00D197EA /* View */,
 				F37BD70A298A379200D197EA /* Model */,
 			);
@@ -159,16 +160,10 @@
 		F37BD71D298A514100D197EA /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD71E298A515E00D197EA /* ModelView.swift */,
+				F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */,
+				F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */,
 			);
 			path = ModelView;
-			sourceTree = "<group>";
-		};
-		F37BD737298AA9C500D197EA /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UseCases;
 			sourceTree = "<group>";
 		};
 		F3F6467929868F6E0054C3B3 = {
@@ -298,17 +293,18 @@
 				F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */,
 				F37BD701298A1EA400D197EA /* Card.swift in Sources */,
 				F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */,
-				F37BD736298AA39200D197EA /* People.swift in Sources */,
 				F37BD72E298A960600D197EA /* Starship.swift in Sources */,
-				F37BD71F298A515E00D197EA /* ModelView.swift in Sources */,
+				F37BD71F298A515E00D197EA /* ModelViewMainScreen.swift in Sources */,
+				F347C12C298BB3C80035A90A /* Character.swift in Sources */,
 				F37BD70C298A37AC00D197EA /* Planet.swift in Sources */,
+				F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */,
 				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
 				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
 				F37BD72A298A947300D197EA /* Planets.swift in Sources */,
-				F37BD708298A364C00D197EA /* ViewControllerPlanetScreen.swift in Sources */,
+				F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */,
 				F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
-				F37BD711298A38B900D197EA /* CustomPlanetCell.swift in Sources */,
+				F37BD711298A38B900D197EA /* CustomElementCardCell.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
 				F37BD726298A933700D197EA /* Specie.swift in Sources */,
 				F347C12A298B66F10035A90A /* TitleScreenEnum.swift in Sources */,

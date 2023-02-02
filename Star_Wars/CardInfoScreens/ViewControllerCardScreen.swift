@@ -8,13 +8,15 @@
 import UIKit
 import SnapKit
 
-class ViewControllerPlanetScreen: UIViewController {
+class ViewControllerCardScreen: UIViewController {
     
-    var titleBlock: titleScreen = .films
+    var titleBlock: TitleScreen = .non
     
     var cardArray: [String] = {
-        return ["Ivan", "Lily", "Elena", "Maxim", "Igor", "Masha"]
+        return ["Ivan", "Lily", "Elena", "Maxim", "Igor", "Masha", "Lily", "Elena", "Maxim", "Igor", "Masha"]
     }()
+    
+    var elementsCardArray: Array<AnyObject> = []
     
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -23,20 +25,27 @@ class ViewControllerPlanetScreen: UIViewController {
         view.delegate = self
         view.dataSource = self
         
-        view.register(CustomPlanetCell.self, forCellWithReuseIdentifier: CustomPlanetCell.reuseIdentifier)
+        view.register(CustomElementCardCell.self, forCellWithReuseIdentifier: CustomElementCardCell.reuseIdentifier)
         
         return view
     }()
     
     lazy var titleScreenLabel: UILabel = {
         let label = UILabel()
-        label.text = titleBlock.rawValue
+        label.text = titleBlock.rawValue.uppercased()
         label.textColor = .yellow
         label.textAlignment = .center
         label.font = UIFont(name: label.font.fontName, size: 35)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
+    }()
+    
+    lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
     }()
     
     private enum Constants {
@@ -64,7 +73,7 @@ class ViewControllerPlanetScreen: UIViewController {
     
     func addConstraints() {
         titleScreenLabel.snp.makeConstraints({ make in
-            make.top.equalToSuperview().inset(76.26)
+            make.top.equalToSuperview().inset(90)
             make.leading.trailing.equalToSuperview().inset(5)
             make.bottom.equalTo(collectionView.snp.top).inset(-45)
         })
@@ -77,17 +86,24 @@ class ViewControllerPlanetScreen: UIViewController {
     }
 }
 
-extension ViewControllerPlanetScreen: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ViewControllerCardScreen: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.cardArray.count
+        self.elementsCardArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomPlanetCell.reuseIdentifier, for: indexPath) as? CustomPlanetCell else { return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomElementCardCell.reuseIdentifier, for: indexPath) as? CustomElementCardCell else { return UICollectionViewCell()}
         
-        cell.configure(with: Planet(title: self.cardArray[indexPath.row], imageName: self.cardArray[indexPath.row]))
+        if !elementsCardArray.isEmpty {
+            print(elementsCardArray)
+            cell.configure(with: elementsCardArray[indexPath.row].self, self.titleBlock)
+            
+            return cell
+        }
         
-        return cell
+        //cell.configure(with: cardArray[indexPath.row], self.titleBlock)
+        
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath ) -> CGSize {

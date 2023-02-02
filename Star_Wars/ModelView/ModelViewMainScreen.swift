@@ -11,7 +11,7 @@ import Alamofire
 class ModelViewMainScreen {
     let baseURl = "https://swapi.dev/api/"
     
-    @Published var arrayElementsBlock: Array<Any> = []
+    @Published var arrayElementsBlock: Array<Film> = []
     
     func fetch(title: TitleScreen) {
         switch title {
@@ -91,7 +91,7 @@ class ModelViewMainScreen {
                 do {
                     DispatchQueue.main.async { [self] in
                         guard let decodeData = try? JSONDecoder().decode(InfoCharacters.self, from: data) else { return }
-                        arrayElementsBlock = decodeData.results
+                        //arrayElementsBlock = decodeData.results
                         print(arrayElementsBlock)
                     }
                     

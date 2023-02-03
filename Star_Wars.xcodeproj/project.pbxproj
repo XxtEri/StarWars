@@ -13,6 +13,14 @@
 		F347C130298BCD160035A90A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12F298BCD160035A90A /* Card.swift */; };
 		F347C142298CDAEE0035A90A /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */; };
 		F347C144298CDAF90035A90A /* Spartan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C143298CDAF90035A90A /* Spartan.ttf */; };
+		F347C149298CDBE90035A90A /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C148298CDBE90035A90A /* MainRouter.swift */; };
+		F347C14F298CE0050035A90A /* ApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C14E298CE0050035A90A /* ApiRepository.swift */; };
+		F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C150298CE0850035A90A /* FirstScreenViewController.swift */; };
+		F347C153298CE0A00035A90A /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C152298CE0A00035A90A /* FirstScreenView.swift */; };
+		F347C158298CE85C0035A90A /* FirstScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C157298CE85C0035A90A /* FirstScreenPresenter.swift */; };
+		F347C15A298CFD870035A90A /* FirstScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C159298CFD870035A90A /* FirstScreenRouter.swift */; };
+		F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C15B298D03460035A90A /* ScreensFactory.swift */; };
+		F347C15E298D038B0035A90A /* FirstScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */; };
 		F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */; };
 		F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD702298A1EEE00D197EA /* CustomCardCell.swift */; };
 		F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */; };
@@ -32,7 +40,6 @@
 		F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468E29868F700054C3B3 /* Assets.xcassets */; };
 		F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */; };
 		F3F646A629879A590054C3B3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3F646A529879A590054C3B3 /* SnapKit */; };
-		F3F646A829879CAF0054C3B3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F646A729879CAF0054C3B3 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +49,14 @@
 		F347C12F298BCD160035A90A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lexend-Bold.ttf"; path = "../../../../../../../Downloads/Lexend/Lexend-Bold.ttf"; sourceTree = "<group>"; };
 		F347C143298CDAF90035A90A /* Spartan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Spartan.ttf; path = ../../../../../../../Downloads/Spartan/Spartan.ttf; sourceTree = "<group>"; };
+		F347C148298CDBE90035A90A /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		F347C14E298CE0050035A90A /* ApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepository.swift; sourceTree = "<group>"; };
+		F347C150298CE0850035A90A /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		F347C152298CE0A00035A90A /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+		F347C157298CE85C0035A90A /* FirstScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenPresenter.swift; sourceTree = "<group>"; };
+		F347C159298CFD870035A90A /* FirstScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenRouter.swift; sourceTree = "<group>"; };
+		F347C15B298D03460035A90A /* ScreensFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensFactory.swift; sourceTree = "<group>"; };
+		F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAssembly.swift; sourceTree = "<group>"; };
 		F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainScreen.swift; sourceTree = "<group>"; };
 		F37BD702298A1EEE00D197EA /* CustomCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardCell.swift; sourceTree = "<group>"; };
 		F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCardScreen.swift; sourceTree = "<group>"; };
@@ -61,7 +76,6 @@
 		F3F6468E29868F700054C3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F6469129868F700054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3F6469329868F700054C3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3F646A729879CAF0054C3B3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +120,53 @@
 		F347C145298CDB0C0035A90A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F347C15B298D03460035A90A /* ScreensFactory.swift */,
 				F3F646A929888BE40054C3B3 /* FirstScreen */,
 				F37BD6FB298A1DC000D197EA /* MainScreen */,
 				F37BD713298A4DB800D197EA /* CardInfoScreens */,
 				F37BD719298A4FFE00D197EA /* InfoElementCard */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		F347C147298CDBC30035A90A /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				F347C148298CDBE90035A90A /* MainRouter.swift */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		F347C14A298CDF2E0035A90A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F347C14B298CDF9C0035A90A /* Api */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F347C14B298CDF9C0035A90A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F347C14C298CDFA50035A90A /* ModelsDTO */,
+				F347C14E298CE0050035A90A /* ApiRepository.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		F347C14C298CDFA50035A90A /* ModelsDTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelsDTO;
+			sourceTree = "<group>";
+		};
+		F347C154298CE3910035A90A /* Рабочее, но удалить */ = {
+			isa = PBXGroup;
+			children = (
+				F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */,
+			);
+			path = "Рабочее, но удалить";
 			sourceTree = "<group>";
 		};
 		F37BD6FA298A1DA300D197EA /* Application */ = {
@@ -208,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				F37BD6FA298A1DA300D197EA /* Application */,
+				F347C147298CDBC30035A90A /* BusinessLogic */,
+				F347C14A298CDF2E0035A90A /* Services */,
 				F347C145298CDB0C0035A90A /* Screens */,
 				F37BD71D298A514100D197EA /* ModelView */,
 				F37BD6FC298A1DD700D197EA /* Model */,
@@ -223,8 +280,12 @@
 		F3F646A929888BE40054C3B3 /* FirstScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */,
-				F3F646A729879CAF0054C3B3 /* View.swift */,
+				F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */,
+				F347C152298CE0A00035A90A /* FirstScreenView.swift */,
+				F347C150298CE0850035A90A /* FirstScreenViewController.swift */,
+				F347C157298CE85C0035A90A /* FirstScreenPresenter.swift */,
+				F347C159298CFD870035A90A /* FirstScreenRouter.swift */,
+				F347C154298CE3910035A90A /* Рабочее, но удалить */,
 			);
 			path = FirstScreen;
 			sourceTree = "<group>";
@@ -310,20 +371,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F646A829879CAF0054C3B3 /* View.swift in Sources */,
 				F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */,
 				F347C130298BCD160035A90A /* Card.swift in Sources */,
 				F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */,
 				F37BD72E298A960600D197EA /* Starship.swift in Sources */,
+				F347C14F298CE0050035A90A /* ApiRepository.swift in Sources */,
+				F347C149298CDBE90035A90A /* MainRouter.swift in Sources */,
 				F37BD71F298A515E00D197EA /* ModelViewMainScreen.swift in Sources */,
 				F347C12C298BB3C80035A90A /* Character.swift in Sources */,
+				F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */,
+				F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */,
 				F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */,
 				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
+				F347C15A298CFD870035A90A /* FirstScreenRouter.swift in Sources */,
 				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
 				F37BD72A298A947300D197EA /* Planets.swift in Sources */,
 				F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */,
 				F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
+				F347C153298CE0A00035A90A /* FirstScreenView.swift in Sources */,
+				F347C158298CE85C0035A90A /* FirstScreenPresenter.swift in Sources */,
+				F347C15E298D038B0035A90A /* FirstScreenAssembly.swift in Sources */,
 				F37BD711298A38B900D197EA /* CustomElementCardCell.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
 				F37BD726298A933700D197EA /* Specie.swift in Sources */,

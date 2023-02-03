@@ -12,12 +12,12 @@ final class MainScreenPresenter {
     
     init(router: IMainScreenRouter) {
         self.router = router
-        
-        self.setHandlers()
     }
     
     func setViewController(vc: MainScreenViewController) {
         self.viewController = vc
+        
+        self.setHandlers()
     }
 }
 

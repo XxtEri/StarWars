@@ -6,6 +6,16 @@
 //
 
 struct MainScreenModel {
-    let title: TitleCard
+    let title: Category
     let imageName: String
 }
+
+enum Category: String, CaseIterable {
+    case characters = "Characters"
+    case films = "Films"
+    case starships = "Starships"
+    case vehicles = "Vehicles"
+    case planets = "Planets"
+    case species = "Species"
+}
+

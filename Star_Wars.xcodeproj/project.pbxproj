@@ -10,7 +10,6 @@
 		F347C12A298B66F10035A90A /* TitleScreenEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C129298B66F10035A90A /* TitleScreenEnum.swift */; };
 		F347C12C298BB3C80035A90A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12B298BB3C80035A90A /* Character.swift */; };
 		F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */; };
-		F347C130298BCD160035A90A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12F298BCD160035A90A /* Card.swift */; };
 		F347C142298CDAEE0035A90A /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */; };
 		F347C144298CDAF90035A90A /* Spartan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C143298CDAF90035A90A /* Spartan.ttf */; };
 		F347C149298CDBE90035A90A /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C148298CDBE90035A90A /* MainRouter.swift */; };
@@ -26,13 +25,16 @@
 		F347C165298D07DD0035A90A /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C164298D07DD0035A90A /* MainScreenAssembly.swift */; };
 		F347C167298D081F0035A90A /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */; };
 		F347C169298D083D0035A90A /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C168298D083D0035A90A /* MainScreenModel.swift */; };
-		F347C16B298D08500035A90A /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16A298D08500035A90A /* MainScreenInteractor.swift */; };
 		F347C16D298D087A0035A90A /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16C298D087A0035A90A /* MainScreenRouter.swift */; };
 		F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16E298D088B0035A90A /* MainScreenPresenter.swift */; };
-		F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */; };
-		F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD702298A1EEE00D197EA /* CustomCardCell.swift */; };
-		F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */; };
-		F37BD711298A38B900D197EA /* CustomElementCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD70F298A38B900D197EA /* CustomElementCardCell.swift */; };
+		F347C172298D34340035A90A /* CardInfoScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C171298D34340035A90A /* CardInfoScreenAssembly.swift */; };
+		F347C174298D344A0035A90A /* CardInfoScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C173298D344A0035A90A /* CardInfoScreenModel.swift */; };
+		F347C176298D345B0035A90A /* CardInfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C175298D345B0035A90A /* CardInfoScreenView.swift */; };
+		F347C178298D346A0035A90A /* CardInfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C177298D346A0035A90A /* CardInfoScreenViewController.swift */; };
+		F347C17A298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C179298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift */; };
+		F347C17C298D34BA0035A90A /* CardInfoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */; };
+		F347C17E298D34C50035A90A /* CardInfoScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */; };
+		F347C180298D3F8C0035A90A /* CardInfoScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */; };
 		F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */; };
 		F37BD71F298A515E00D197EA /* ModelViewMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */; };
 		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
@@ -43,7 +45,6 @@
 		F37BD730298A96D400D197EA /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD72F298A96D400D197EA /* Vehicles.swift */; };
 		F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468529868F6E0054C3B3 /* AppDelegate.swift */; };
 		F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */; };
-		F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */; };
 		F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468B29868F6E0054C3B3 /* Main.storyboard */; };
 		F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468E29868F700054C3B3 /* Assets.xcassets */; };
 		F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */; };
@@ -54,7 +55,6 @@
 		F347C129298B66F10035A90A /* TitleScreenEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenEnum.swift; sourceTree = "<group>"; };
 		F347C12B298BB3C80035A90A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovelViewCardScreen.swift; sourceTree = "<group>"; };
-		F347C12F298BCD160035A90A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lexend-Bold.ttf"; path = "../../../../../../../Downloads/Lexend/Lexend-Bold.ttf"; sourceTree = "<group>"; };
 		F347C143298CDAF90035A90A /* Spartan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Spartan.ttf; path = ../../../../../../../Downloads/Spartan/Spartan.ttf; sourceTree = "<group>"; };
 		F347C148298CDBE90035A90A /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -70,13 +70,16 @@
 		F347C164298D07DD0035A90A /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		F347C168298D083D0035A90A /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
-		F347C16A298D08500035A90A /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
 		F347C16C298D087A0035A90A /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
 		F347C16E298D088B0035A90A /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
-		F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainScreen.swift; sourceTree = "<group>"; };
-		F37BD702298A1EEE00D197EA /* CustomCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardCell.swift; sourceTree = "<group>"; };
-		F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCardScreen.swift; sourceTree = "<group>"; };
-		F37BD70F298A38B900D197EA /* CustomElementCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElementCardCell.swift; sourceTree = "<group>"; };
+		F347C171298D34340035A90A /* CardInfoScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C173298D344A0035A90A /* CardInfoScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenModel.swift; sourceTree = "<group>"; };
+		F347C175298D345B0035A90A /* CardInfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenView.swift; sourceTree = "<group>"; };
+		F347C177298D346A0035A90A /* CardInfoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenViewController.swift; sourceTree = "<group>"; };
+		F347C179298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenPresenter.swift; sourceTree = "<group>"; };
+		F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenRouter.swift; sourceTree = "<group>"; };
+		F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenInteractor.swift; sourceTree = "<group>"; };
 		F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfoElementCard.swift; sourceTree = "<group>"; };
 		F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewMainScreen.swift; sourceTree = "<group>"; };
 		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
@@ -87,7 +90,6 @@
 		F3F6468229868F6E0054C3B3 /* Star_Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star_Wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F6468529868F6E0054C3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFirstScreen.swift; sourceTree = "<group>"; };
 		F3F6468C29868F6E0054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F6468E29868F700054C3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F6469129868F700054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,7 +141,7 @@
 				F347C15B298D03460035A90A /* ScreensFactory.swift */,
 				F3F646A929888BE40054C3B3 /* FirstScreen */,
 				F37BD6FB298A1DC000D197EA /* MainScreen */,
-				F37BD713298A4DB800D197EA /* CardInfoScreens */,
+				F37BD713298A4DB800D197EA /* CardInfoScreen */,
 				F37BD719298A4FFE00D197EA /* InfoElementCard */,
 			);
 			path = Screens;
@@ -173,25 +175,14 @@
 		F347C14C298CDFA50035A90A /* ModelsDTO */ = {
 			isa = PBXGroup;
 			children = (
+				F37BD723298A90EB00D197EA /* Film.swift */,
+				F37BD725298A933700D197EA /* Specie.swift */,
+				F37BD72D298A960600D197EA /* Starship.swift */,
+				F37BD72F298A96D400D197EA /* Vehicles.swift */,
+				F347C12B298BB3C80035A90A /* Character.swift */,
+				F37BD729298A947300D197EA /* Planets.swift */,
 			);
 			path = ModelsDTO;
-			sourceTree = "<group>";
-		};
-		F347C154298CE3910035A90A /* Рабочее, но удалить */ = {
-			isa = PBXGroup;
-			children = (
-				F3F6468929868F6E0054C3B3 /* ViewControllerFirstScreen.swift */,
-			);
-			path = "Рабочее, но удалить";
-			sourceTree = "<group>";
-		};
-		F347C15F298D078E0035A90A /* Рабочее, но позже удалить */ = {
-			isa = PBXGroup;
-			children = (
-				F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */,
-				F37BD6FD298A1DE800D197EA /* View */,
-			);
-			path = "Рабочее, но позже удалить";
 			sourceTree = "<group>";
 		};
 		F37BD6FA298A1DA300D197EA /* Application */ = {
@@ -213,49 +204,23 @@
 				F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */,
 				F347C16E298D088B0035A90A /* MainScreenPresenter.swift */,
 				F347C16C298D087A0035A90A /* MainScreenRouter.swift */,
-				F347C16A298D08500035A90A /* MainScreenInteractor.swift */,
-				F347C15F298D078E0035A90A /* Рабочее, но позже удалить */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
-		F37BD6FC298A1DD700D197EA /* Model */ = {
+		F37BD713298A4DB800D197EA /* CardInfoScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD723298A90EB00D197EA /* Film.swift */,
-				F37BD725298A933700D197EA /* Specie.swift */,
-				F37BD729298A947300D197EA /* Planets.swift */,
-				F37BD72D298A960600D197EA /* Starship.swift */,
-				F37BD72F298A96D400D197EA /* Vehicles.swift */,
-				F347C12B298BB3C80035A90A /* Character.swift */,
-				F347C12F298BCD160035A90A /* Card.swift */,
+				F347C171298D34340035A90A /* CardInfoScreenAssembly.swift */,
+				F347C173298D344A0035A90A /* CardInfoScreenModel.swift */,
+				F347C175298D345B0035A90A /* CardInfoScreenView.swift */,
+				F347C177298D346A0035A90A /* CardInfoScreenViewController.swift */,
+				F347C179298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift */,
+				F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */,
+				F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */,
+				F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F37BD6FD298A1DE800D197EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F37BD702298A1EEE00D197EA /* CustomCardCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F37BD709298A377C00D197EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F37BD70F298A38B900D197EA /* CustomElementCardCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F37BD713298A4DB800D197EA /* CardInfoScreens */ = {
-			isa = PBXGroup;
-			children = (
-				F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */,
-				F37BD709298A377C00D197EA /* View */,
-			);
-			path = CardInfoScreens;
+			path = CardInfoScreen;
 			sourceTree = "<group>";
 		};
 		F37BD719298A4FFE00D197EA /* InfoElementCard */ = {
@@ -299,7 +264,6 @@
 				F347C14A298CDF2E0035A90A /* Services */,
 				F347C145298CDB0C0035A90A /* Screens */,
 				F37BD71D298A514100D197EA /* ModelView */,
-				F37BD6FC298A1DD700D197EA /* Model */,
 				F347C128298B66C70035A90A /* UseCases */,
 				F347C140298CDA9A0035A90A /* Resources */,
 				F3F6468B29868F6E0054C3B3 /* Main.storyboard */,
@@ -317,7 +281,6 @@
 				F347C150298CE0850035A90A /* FirstScreenViewController.swift */,
 				F347C157298CE85C0035A90A /* FirstScreenPresenter.swift */,
 				F347C159298CFD870035A90A /* FirstScreenRouter.swift */,
-				F347C154298CE3910035A90A /* Рабочее, но удалить */,
 			);
 			path = FirstScreen;
 			sourceTree = "<group>";
@@ -404,8 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */,
-				F347C130298BCD160035A90A /* Card.swift in Sources */,
-				F3F6468A29868F6E0054C3B3 /* ViewControllerFirstScreen.swift in Sources */,
+				F347C174298D344A0035A90A /* CardInfoScreenModel.swift in Sources */,
 				F37BD72E298A960600D197EA /* Starship.swift in Sources */,
 				F347C14F298CE0050035A90A /* ApiRepository.swift in Sources */,
 				F347C149298CDBE90035A90A /* MainRouter.swift in Sources */,
@@ -414,29 +376,31 @@
 				F347C12C298BB3C80035A90A /* Character.swift in Sources */,
 				F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */,
 				F347C163298D07C30035A90A /* MainScreenViewController.swift in Sources */,
+				F347C17E298D34C50035A90A /* CardInfoScreenRouter.swift in Sources */,
 				F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */,
 				F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */,
+				F347C178298D346A0035A90A /* CardInfoScreenViewController.swift in Sources */,
 				F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */,
 				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
+				F347C176298D345B0035A90A /* CardInfoScreenView.swift in Sources */,
 				F347C15A298CFD870035A90A /* FirstScreenRouter.swift in Sources */,
 				F347C167298D081F0035A90A /* MainScreenCollectionViewCell.swift in Sources */,
 				F347C169298D083D0035A90A /* MainScreenModel.swift in Sources */,
-				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
 				F347C16D298D087A0035A90A /* MainScreenRouter.swift in Sources */,
 				F37BD72A298A947300D197EA /* Planets.swift in Sources */,
-				F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */,
-				F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */,
-				F347C16B298D08500035A90A /* MainScreenInteractor.swift in Sources */,
+				F347C172298D34340035A90A /* CardInfoScreenAssembly.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
 				F347C153298CE0A00035A90A /* FirstScreenView.swift in Sources */,
 				F347C158298CE85C0035A90A /* FirstScreenPresenter.swift in Sources */,
 				F347C15E298D038B0035A90A /* FirstScreenAssembly.swift in Sources */,
-				F37BD711298A38B900D197EA /* CustomElementCardCell.swift in Sources */,
 				F347C161298D07AC0035A90A /* MainScreenView.swift in Sources */,
+				F347C180298D3F8C0035A90A /* CardInfoScreenInteractor.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
 				F37BD726298A933700D197EA /* Specie.swift in Sources */,
 				F347C12A298B66F10035A90A /* TitleScreenEnum.swift in Sources */,
+				F347C17A298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift in Sources */,
 				F37BD724298A90EB00D197EA /* Film.swift in Sources */,
+				F347C17C298D34BA0035A90A /* CardInfoScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

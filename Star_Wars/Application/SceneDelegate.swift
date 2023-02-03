@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let screensFactory = ScreensFactory()
+        let apiRepository = ApiRepository()
+        let screensFactory = ScreensFactory(apiRepository: apiRepository)
         self.mainRouter = MainRouter(screenFactory: screensFactory)
         
         let navigationController = self.mainRouter?.start()

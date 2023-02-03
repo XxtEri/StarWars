@@ -9,7 +9,7 @@ import UIKit
 
 enum MainScreenAssembly {
     struct Parameters {
-        let completionHandler: ((TitleCard) -> Void)
+        let completionHandler: ((Category) -> Void)
     }
     
     static func build(with parameters: Parameters) -> UIViewController {

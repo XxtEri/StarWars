@@ -1,16 +1,14 @@
 //
-//  CustomPlanetCell.swift
+//  CardInfoScreenCollectionViewCell.swift
 //  Star_Wars
 //
-//  Created by Елена on 01.02.2023.
+//  Created by Елена on 03.02.2023.
 //
 
 import UIKit
-import SnapKit
 
-final class CustomElementCardCell: UICollectionViewCell {
-    
-    static let reuseIdentifier = "CustomPlanetCell"
+class CardInfoScreenCollectionViewCell: UICollectionViewCell {
+    static let reuseIdentifier = "CardInfoScreenCollectionViewCell"
     
     lazy var imagePlanet: UIImageView = {
         var imageView = UIImageView(frame: .zero)
@@ -31,7 +29,7 @@ final class CustomElementCardCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var allow: UIImageView = {
+    lazy var allowButton: UIImageView = {
         let image = UIImageView(image: UIImage(named: "SimpleAllow"))
         image.contentMode = .scaleAspectFit
         
@@ -43,69 +41,54 @@ final class CustomElementCardCell: UICollectionViewCell {
         
         self.addSubview(imagePlanet)
         self.addSubview(titleCell)
-        self.addSubview(allow)
+        self.addSubview(allowButton)
         
-        createAllowButton()
-        
-        self.setLayerParameters()
-        self.setConstraints()
+        setup()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configure(with model: CardInfoScreenModel) {
+        self.titleCell.text = model.titleName
+    }
+}
 
-    func createAllowButton() {
-        allow.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(pressAllow(paramSender:))))
+private extension CardInfoScreenCollectionViewCell {
+    func setup() {
+        self.configureElement()
+        self.configureConstants()
+        self.configureActions()
     }
     
-    @objc
-    func pressAllow(paramSender: UIImageView) {
-        print("Press")
+    func configureElement() {
+        self.layer.cornerRadius = 35
+        self.layer.masksToBounds = true
     }
     
-    func setConstraints() {
+    func configureConstants() {
         imagePlanet.snp.makeConstraints({ make in
             make.edges.equalToSuperview()
         })
         
         titleCell.snp.makeConstraints({ make in
             make.leading.top.bottom.equalToSuperview().inset(10)
-            make.trailing.equalTo(self.allow.snp.leading).inset(10)
+            make.trailing.equalTo(self.allowButton.snp.leading).inset(10)
         })
         
-        allow.snp.makeConstraints({ make in
+        allowButton.snp.makeConstraints({ make in
             make.top.bottom.equalToSuperview().inset(24)
             make.trailing.equalToSuperview().inset(25.18)
         })
     }
-
-    func setLayerParameters() {
-        self.layer.cornerRadius = 35
-        self.layer.masksToBounds = true
+    
+    func configureActions() {
+        self.allowButton.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(pressAllow(paramSender:))))
     }
     
-    func configure(with model: Film) {
-//        switch titleBlock {
-//        case .films:
-//            self.titleCell.text = model.name
-//        case .characters:
-//            print("")
-//        case .planets:
-//            print("")
-//        case .species:
-//            print("")
-//        case .starships:
-//            print("")
-//        case .vehicles:
-//            print("")
-//        case .non:
-//            print("")
-//        }
-        self.titleCell.text = model.name
-    }
-
-    func configure(with model: Planet) {
-        self.titleCell.text = model.name
+    @objc
+    func pressAllow(paramSender: UIImageView) {
+        print("Press")
     }
 }

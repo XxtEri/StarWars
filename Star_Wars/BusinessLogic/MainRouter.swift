@@ -40,13 +40,26 @@ extension MainRouter: IMainRouter {
 
 private extension MainRouter {
     func showMainScreen() {
-        let completionHandler: (TitleCard) -> Void = { [weak self] titleCard in
-            print(titleCard)
+        let completionHandler: (Category) -> Void = { [weak self] selectedCategory in
+            print(selectedCategory.rawValue)
+            self?.showCardInfoScreen(selectedCategory: selectedCategory)
         }
         
         let parameters = MainScreenAssembly.Parameters(completionHandler: completionHandler)
         let viewController = self.screenFactory.makeMainScreen(with: parameters)
         viewController.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func showCardInfoScreen(selectedCategory: Category) {
+        let completionHandler: (Int) -> Void = { [weak self] elementId in
+            print(elementId)
+        }
+        
+        let parameters = CardInfoScreenAssembly.Parameters(completionHandler: completionHandler,
+                                                           selectedCategory: selectedCategory)
+        let viewController = self.screenFactory.makeCardInfoScreen(with: parameters)
+        
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

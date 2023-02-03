@@ -5,29 +5,20 @@
 //  Created by Елена on 03.02.2023.
 //
 
-enum TitleCard: String, CaseIterable {
-    case characters = "Characters"
-    case films = "Films"
-    case starships = "Starships"
-    case vehicles = "Vehicles"
-    case planets = "Planets"
-    case species = "Species"
-}
-
 protocol IMainScreenRouter {
-    func goToCardDetails(with cardTitle: TitleCard)
+    func goToCardDetails(with cardTitle: Category)
 }
 
 final class MainScreenRouter {
-    private var completionHandler: ((TitleCard) -> Void)?
+    private var completionHandler: ((Category) -> Void)?
     
-    init(completionHandler: ((TitleCard) -> Void)?) {
+    init(completionHandler: ((Category) -> Void)?) {
         self.completionHandler = completionHandler
     }
 }
 
 extension MainScreenRouter: IMainScreenRouter {
-    func goToCardDetails(with cardTitle: TitleCard) {
+    func goToCardDetails(with cardTitle: Category) {
         self.completionHandler?(cardTitle)
     }
 }

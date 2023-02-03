@@ -9,14 +9,18 @@ import UIKit
 
 class FirstScreenViewController: UIViewController {
 
+    private var presenter: FirstScreenPresenter
     private var ui: FirstScreenView
     
     var didSelectNextScreenHandler: (() -> Void)?
     
-    init() {
+    init(presenter: FirstScreenPresenter) {
         self.ui = FirstScreenView(frame: .zero)
+        self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
+        
+        self.setHandlers()
     }
     
     required init?(coder: NSCoder) {
@@ -36,8 +40,14 @@ class FirstScreenViewController: UIViewController {
 
 private extension FirstScreenViewController {
     func setHandlers() {
-        let view = ViewControllerMainScreen()
-        view.navigationItem.setHidesBackButton(true, animated: false)
-        self.navigationController?.pushViewController(view, animated: true)
+        self.ui.nextScreenButtonTapHandler = { [weak self] in
+            guard let self = self else { return }
+            
+            self.didSelectNextScreenHandler?()
+            
+        }
+//        let view = ViewControllerMainScreen()
+//        view.navigationItem.setHidesBackButton(true, animated: false)
+//        self.navigationController?.pushViewController(view, animated: true)
     }
 }

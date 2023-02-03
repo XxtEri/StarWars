@@ -21,6 +21,14 @@
 		F347C15A298CFD870035A90A /* FirstScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C159298CFD870035A90A /* FirstScreenRouter.swift */; };
 		F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C15B298D03460035A90A /* ScreensFactory.swift */; };
 		F347C15E298D038B0035A90A /* FirstScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */; };
+		F347C161298D07AC0035A90A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C160298D07AC0035A90A /* MainScreenView.swift */; };
+		F347C163298D07C30035A90A /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C162298D07C30035A90A /* MainScreenViewController.swift */; };
+		F347C165298D07DD0035A90A /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C164298D07DD0035A90A /* MainScreenAssembly.swift */; };
+		F347C167298D081F0035A90A /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */; };
+		F347C169298D083D0035A90A /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C168298D083D0035A90A /* MainScreenModel.swift */; };
+		F347C16B298D08500035A90A /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16A298D08500035A90A /* MainScreenInteractor.swift */; };
+		F347C16D298D087A0035A90A /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16C298D087A0035A90A /* MainScreenRouter.swift */; };
+		F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16E298D088B0035A90A /* MainScreenPresenter.swift */; };
 		F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */; };
 		F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD702298A1EEE00D197EA /* CustomCardCell.swift */; };
 		F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */; };
@@ -57,6 +65,14 @@
 		F347C159298CFD870035A90A /* FirstScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenRouter.swift; sourceTree = "<group>"; };
 		F347C15B298D03460035A90A /* ScreensFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensFactory.swift; sourceTree = "<group>"; };
 		F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C160298D07AC0035A90A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		F347C162298D07C30035A90A /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		F347C164298D07DD0035A90A /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		F347C168298D083D0035A90A /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		F347C16A298D08500035A90A /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		F347C16C298D087A0035A90A /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		F347C16E298D088B0035A90A /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainScreen.swift; sourceTree = "<group>"; };
 		F37BD702298A1EEE00D197EA /* CustomCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardCell.swift; sourceTree = "<group>"; };
 		F37BD707298A364C00D197EA /* ViewControllerCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCardScreen.swift; sourceTree = "<group>"; };
@@ -169,6 +185,15 @@
 			path = "Рабочее, но удалить";
 			sourceTree = "<group>";
 		};
+		F347C15F298D078E0035A90A /* Рабочее, но позже удалить */ = {
+			isa = PBXGroup;
+			children = (
+				F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */,
+				F37BD6FD298A1DE800D197EA /* View */,
+			);
+			path = "Рабочее, но позже удалить";
+			sourceTree = "<group>";
+		};
 		F37BD6FA298A1DA300D197EA /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,8 +206,15 @@
 		F37BD6FB298A1DC000D197EA /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD6FE298A1E4700D197EA /* ViewControllerMainScreen.swift */,
-				F37BD6FD298A1DE800D197EA /* View */,
+				F347C164298D07DD0035A90A /* MainScreenAssembly.swift */,
+				F347C168298D083D0035A90A /* MainScreenModel.swift */,
+				F347C160298D07AC0035A90A /* MainScreenView.swift */,
+				F347C162298D07C30035A90A /* MainScreenViewController.swift */,
+				F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */,
+				F347C16E298D088B0035A90A /* MainScreenPresenter.swift */,
+				F347C16C298D087A0035A90A /* MainScreenRouter.swift */,
+				F347C16A298D08500035A90A /* MainScreenInteractor.swift */,
+				F347C15F298D078E0035A90A /* Рабочее, но позже удалить */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -377,22 +409,30 @@
 				F37BD72E298A960600D197EA /* Starship.swift in Sources */,
 				F347C14F298CE0050035A90A /* ApiRepository.swift in Sources */,
 				F347C149298CDBE90035A90A /* MainRouter.swift in Sources */,
+				F347C165298D07DD0035A90A /* MainScreenAssembly.swift in Sources */,
 				F37BD71F298A515E00D197EA /* ModelViewMainScreen.swift in Sources */,
 				F347C12C298BB3C80035A90A /* Character.swift in Sources */,
 				F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */,
+				F347C163298D07C30035A90A /* MainScreenViewController.swift in Sources */,
 				F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */,
 				F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */,
+				F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */,
 				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
 				F347C15A298CFD870035A90A /* FirstScreenRouter.swift in Sources */,
+				F347C167298D081F0035A90A /* MainScreenCollectionViewCell.swift in Sources */,
+				F347C169298D083D0035A90A /* MainScreenModel.swift in Sources */,
 				F37BD704298A1EEE00D197EA /* CustomCardCell.swift in Sources */,
+				F347C16D298D087A0035A90A /* MainScreenRouter.swift in Sources */,
 				F37BD72A298A947300D197EA /* Planets.swift in Sources */,
 				F37BD708298A364C00D197EA /* ViewControllerCardScreen.swift in Sources */,
 				F37BD6FF298A1E4700D197EA /* ViewControllerMainScreen.swift in Sources */,
+				F347C16B298D08500035A90A /* MainScreenInteractor.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
 				F347C153298CE0A00035A90A /* FirstScreenView.swift in Sources */,
 				F347C158298CE85C0035A90A /* FirstScreenPresenter.swift in Sources */,
 				F347C15E298D038B0035A90A /* FirstScreenAssembly.swift in Sources */,
 				F37BD711298A38B900D197EA /* CustomElementCardCell.swift in Sources */,
+				F347C161298D07AC0035A90A /* MainScreenView.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
 				F37BD726298A933700D197EA /* Specie.swift in Sources */,
 				F347C12A298B66F10035A90A /* TitleScreenEnum.swift in Sources */,

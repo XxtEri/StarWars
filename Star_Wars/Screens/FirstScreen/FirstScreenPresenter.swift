@@ -16,12 +16,14 @@ final class FirstScreenPresenter {
     func setViewController(vc: FirstScreenViewController) {
         self.viewController = vc
         
-        
+        self.setHandlers()
     }
 }
 
 extension FirstScreenPresenter {
     func setHandlers() {
-        self.viewController?.didSelectNextScreenHandler = self.router.goToMainScreen
+        self.viewController?.didSelectNextScreenHandler = { [weak self] in
+            self?.router.goToMainScreen()
+        }
     }
 }

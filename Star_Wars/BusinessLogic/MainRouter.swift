@@ -22,7 +22,12 @@ final class MainRouter {
 
 extension MainRouter: IMainRouter {
     func start() -> UINavigationController {
-        let startViewController = self.screenFactory.makeFirstScreen()
+        let completionHandler: () -> Void = { [weak self] in
+            self?.showMainScreen()
+        }
+        
+        let parameters = FirstScreenAssembly.Parameters(completionHandler: completionHandler)
+        let startViewController = self.screenFactory.makeFirstScreen(with: parameters)
 
         let navigationController = UINavigationController(rootViewController: startViewController)
 
@@ -34,7 +39,14 @@ extension MainRouter: IMainRouter {
 }
 
 private extension MainRouter {
-    func showListCard(with cardId: String) {
-        //let parameters = listCardSreen.Parameters(cardId)
+    func showMainScreen() {
+        let completionHandler: (TitleCard) -> Void = { [weak self] titleCard in
+            print(titleCard)
+        }
+        
+        let parameters = MainScreenAssembly.Parameters(completionHandler: completionHandler)
+        let viewController = self.screenFactory.makeMainScreen(with: parameters)
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

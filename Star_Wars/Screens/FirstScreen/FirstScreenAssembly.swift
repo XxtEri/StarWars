@@ -8,8 +8,17 @@
 import UIKit
 
 enum FirstScreenAssembly {
-    static func build() -> UIViewController {
-        let viewController = FirstScreenViewController()
+    
+    struct Parameters {
+        let completionHandler: (() -> Void)
+    }
+    
+    static func build(with parameters: Parameters) -> UIViewController {
+        let router = FirstScreenRouter(completionHandler: parameters.completionHandler)
+        
+        let presenter = FirstScreenPresenter(router: router)
+        let viewController = FirstScreenViewController(presenter: presenter)
+        presenter.setViewController(vc: viewController)
 
         return viewController
     }

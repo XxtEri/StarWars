@@ -19,6 +19,6 @@ final class FirstScreenRouter {
 
 extension FirstScreenRouter: IFirstScreenRouter {
     func goToMainScreen() {
-        self.completionHandler
+        self.completionHandler?()
     }
 }

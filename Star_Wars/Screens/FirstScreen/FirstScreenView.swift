@@ -50,7 +50,7 @@ class FirstScreenView: UIView {
         return view
     }()
     
-    var nextPageButtonTapHandler: (() -> Void)?
+    var nextScreenButtonTapHandler: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -110,6 +110,6 @@ private extension FirstScreenView {
     
     @objc
     func performDisplaySecondVC(paramSender: UIImageView) {
-        self.nextPageButtonTapHandler?()
+        self.nextScreenButtonTapHandler?()
     }
 }

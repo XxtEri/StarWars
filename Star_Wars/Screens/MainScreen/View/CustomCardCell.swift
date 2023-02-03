@@ -103,7 +103,6 @@ class CustomCardCell: UICollectionViewCell {
             view.titleBlock = .starships
             print("starships")
         default:
-            view.titleBlock = .non
             print("non")
         }
         

@@ -5,6 +5,7 @@
 //  Created by Елена on 01.02.2023.
 //
 
+import UIKit
 import Foundation
 import Alamofire
 
@@ -25,11 +26,16 @@ class ModelViewMainScreen {
     }
     
     func fetchFilms() {
-        let url = self.baseURl + "films"
+        let url = "https://swapi.dev/api/" + "films"
+        
+        //activityIndicator.startAnimating()
         
         AF.request(url,
                    method: .get,
                    parameters: nil).responseData { [self] response in
+            
+            //activityIndicator.stopAnimating()
+            
             if let request = response.request {
                 print("Request: \(request)")
             }
@@ -47,21 +53,16 @@ class ModelViewMainScreen {
             
             switch response.result {
             case .success(let data):
-                do {
-                    DispatchQueue.main.async { [self] in
-                        guard let decodeData = try? JSONDecoder().decode(InfoFilms.self, from: data) else { return }
-                        arrayElementsBlock = decodeData.results
-                        print(arrayElementsBlock)
-                    }
-                    
-                } catch (let error) {
-                    print(error.localizedDescription)
-                    return
-                }
+                guard let decodeData = try? JSONDecoder().decode(InfoFilms.self, from: data) else { return }
+                self.arrayElementsBlock = decodeData.results
+                
+                //collectionView.reloadData()
+                
             case .failure (let error):
                 print(error.localizedDescription)
                 return
             }
+            
         }
     }
     

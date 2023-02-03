@@ -11,3 +11,7 @@ struct Card {
     let title: String
     let imageName: String
 }
+
+struct CardScreen {
+    let label: TitleScreen
+}

@@ -49,6 +49,7 @@ class ViewControllerMainScreen: UIViewController {
         self.view.addSubview(collectionView)
         self.view.inputViewController?.navigationItem.hidesBackButton = true
         collectionView.backgroundColor = .black
+        
         addConstraints()
     }
     
@@ -59,6 +60,7 @@ class ViewControllerMainScreen: UIViewController {
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
         })
+        
     }
 }
 

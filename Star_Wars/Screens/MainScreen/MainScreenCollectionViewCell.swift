@@ -57,6 +57,7 @@ class MainScreenCollectionViewCell: UICollectionViewCell {
 
 private extension MainScreenCollectionViewCell {
     func setup() {
+        self.configureCard()
         self.configureConstraints()
     }
     

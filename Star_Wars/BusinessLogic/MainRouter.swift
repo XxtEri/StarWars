@@ -46,7 +46,7 @@ private extension MainRouter {
         
         let parameters = MainScreenAssembly.Parameters(completionHandler: completionHandler)
         let viewController = self.screenFactory.makeMainScreen(with: parameters)
-        
+        viewController.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

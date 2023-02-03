@@ -64,12 +64,12 @@ private extension MainScreenView {
     
     func configure() {
         self.backgroundColor = .black
-        self.inputViewController?.navigationItem.hidesBackButton = true
     }
     
     func configureConstraints() {
         self.collectionView.snp.makeConstraints({ make in
-            make.leading.trailing.equalToSuperview()
+            make.leading.equalToSuperview().inset(22)
+            make.trailing.equalToSuperview().inset(21)
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         })

@@ -12,6 +12,15 @@ class MainScreenViewController: UIViewController {
     private var ui: IMainScreenView
     private var presenter: MainScreenPresenter
     
+    private enum Metrics {
+        static let itemsInRow = 2
+        
+        static let viewInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        static let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        static let lineSpace: CGFloat = 46
+        static let itemSpace: CGFloat = 23
+    }
+    
     private var listTitleCard: [MainScreenModel] = {
         var array: [MainScreenModel] = []
         
@@ -42,7 +51,7 @@ class MainScreenViewController: UIViewController {
     }
 }
 
-extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.listTitleCard.count
     }
@@ -55,6 +64,31 @@ extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.configure(with: self.listTitleCard[indexPath.row], numberCard: indexPath.row)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath ) -> CGSize {
+        
+        let sideInsets = (Metrics.insets.left + Metrics.viewInsets.left) * 2
+        let insetsSum = Metrics.itemSpace * (CGFloat(Metrics.itemsInRow) - 1) + sideInsets
+        let otherSpace = collectionView.frame.width - insetsSum
+        let cellWidth = otherSpace / CGFloat(Metrics.itemsInRow)
+        
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        Metrics.insets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        Metrics.itemSpace
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        Metrics.lineSpace
     }
 }
 

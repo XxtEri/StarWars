@@ -56,6 +56,11 @@ class CardInfoScreenViewController: UIViewController {
         self.presenter.loadElementsCard()
     }
     
+    @objc
+    private func performAdd(param: UIBarButtonItem) {
+        print("Ha")
+    }
+    
 }
 
 extension CardInfoScreenViewController: ICardInfoScreenViewController {

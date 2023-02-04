@@ -69,6 +69,7 @@ private extension ElementCategoryDetailsScreenView {
     }
     
     func configure() {
+        
         self.backgroundColor = .black
     }
     

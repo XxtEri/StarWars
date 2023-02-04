@@ -10,9 +10,10 @@ import UIKit
 class CardInfoScreenCollectionViewCell: UICollectionViewCell {
     
     private enum Metrics {
-        static let titleCellSize: CGFloat = 24
+        static let titleCellSize: CGFloat = 20
         static let cornerRadiusView: CGFloat = 35
-        static let titleCellLeadingTopBottonInset: CGFloat = 10
+        static let titleCellVerticalEdgesInset: CGFloat = 5
+        static let titleCellLeadingInset: CGFloat = 10
         static let titleCellTrailingInset: CGFloat = 10
         static let allowImageViewVerticalEdgesInset: CGFloat = 24
         static let allowImageViewTrailingInset: CGFloat = 25.18
@@ -82,7 +83,8 @@ private extension CardInfoScreenCollectionViewCell {
         })
         
         titleCell.snp.makeConstraints({ make in
-            make.leading.top.bottom.equalToSuperview().inset(Metrics.titleCellLeadingTopBottonInset)
+            make.verticalEdges.equalToSuperview().inset(Metrics.titleCellVerticalEdgesInset)
+            make.leading.equalToSuperview().inset(Metrics.titleCellTrailingInset)
             make.trailing.equalTo(self.allowImageView.snp.leading).inset(Metrics.titleCellTrailingInset)
         })
         

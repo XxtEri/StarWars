@@ -16,8 +16,8 @@ class ElementCategoryDetailsScreenView: UIView {
     
     private enum Metrics {
         static let titleElementSize: CGFloat = 30
+        static let titleElementHorizontalEdgesInent: CGFloat = 10
         static let infoElementSize: CGFloat = 18
-        static let titleElementTopInset: CGFloat = 76
         static let infoElementTopInset: CGFloat = -35
         static let infoElementLeadingInset: CGFloat = 30
         static let infoElementTrailingInset: CGFloat = 43
@@ -74,8 +74,8 @@ private extension ElementCategoryDetailsScreenView {
     
     func configureConstraints() {
         titleElement.snp.makeConstraints({ make in
-            make.leading.trailing.equalToSuperview()
-            make.top.equalToSuperview().inset(Metrics.titleElementTopInset)
+            make.horizontalEdges.equalToSuperview().inset(Metrics.titleElementHorizontalEdgesInent)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
         })
         
         infoElement.snp.makeConstraints({ make in

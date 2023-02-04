@@ -15,14 +15,19 @@ protocol IElementCategoryDetailsScreenView {
 class ElementCategoryDetailsScreenView: UIView {
     
     private enum Metrics {
-        
+        static let titleElementSize: CGFloat = 30
+        static let infoElementSize: CGFloat = 18
+        static let titleElementTopInset: CGFloat = 76
+        static let infoElementTopInset: CGFloat = -35
+        static let infoElementLeadingInset: CGFloat = 30
+        static let infoElementTrailingInset: CGFloat = 43
     }
 
     lazy var titleElement: UILabel =  {
         let view = UILabel()
         view.textColor = .yellow
         view.textAlignment = .center
-        view.font = UIFont(name: view.font.fontName, size: 30)
+        view.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.titleElementSize)
 
         return view
     }()
@@ -32,7 +37,7 @@ class ElementCategoryDetailsScreenView: UIView {
         view.textColor = .white
         view.textAlignment = .left
         view.backgroundColor = .black
-        view.font = .systemFont(ofSize: 18)
+        view.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.infoElementSize)
         return view
     }()
     
@@ -70,13 +75,13 @@ private extension ElementCategoryDetailsScreenView {
     func configureConstraints() {
         titleElement.snp.makeConstraints({ make in
             make.leading.trailing.equalToSuperview()
-            make.top.equalToSuperview().inset(76)
+            make.top.equalToSuperview().inset(Metrics.titleElementTopInset)
         })
         
         infoElement.snp.makeConstraints({ make in
-            make.top.equalTo(self.titleElement.snp.bottom).inset(-35)
-            make.leading.equalToSuperview().inset(30)
-            make.trailing.equalToSuperview().inset(43)
+            make.top.equalTo(self.titleElement.snp.bottom).inset(Metrics.infoElementTopInset)
+            make.leading.equalToSuperview().inset(Metrics.infoElementLeadingInset)
+            make.trailing.equalToSuperview().inset(Metrics.infoElementTrailingInset)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         })
     }

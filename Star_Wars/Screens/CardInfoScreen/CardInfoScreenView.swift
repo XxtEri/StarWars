@@ -16,14 +16,16 @@ protocol ICardInfoScreenView: UIView {
 class CardInfoScreenView: UIView {
 
     private enum Metrics {
-        
+        static let titleScreenSize: CGFloat = 35
+        static let titleScreenTopInset: CGFloat = 90
+        static let titleScreenHorizontalEdgesInset: CGFloat = 5
     }
     
-    lazy var titleScreenLabel: UILabel = {
+    lazy var titleScreen: UILabel = {
         let label = UILabel()
         label.textColor = .yellow
         label.textAlignment = .center
-        label.font = UIFont(name: "Spartan", size: 35)
+        label.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.titleScreenSize)
         
         return label
     }()
@@ -43,7 +45,7 @@ class CardInfoScreenView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(self.titleScreenLabel)
+        self.addSubview(self.titleScreen)
         self.addSubview(self.collectionView)
         
         setup()
@@ -56,7 +58,7 @@ class CardInfoScreenView: UIView {
 
 extension CardInfoScreenView: ICardInfoScreenView {
     func setTitleScreen(titleScreen: String) {
-        self.titleScreenLabel.text = titleScreen
+        self.titleScreen.text = titleScreen
     }
     
     func reloadCollectionView() {
@@ -83,14 +85,13 @@ private extension CardInfoScreenView {
     }
     
     func configureConstraints() {
-        titleScreenLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(90)
-            make.leading.trailing.equalToSuperview().inset(5)
-            //make.bottom.equalTo(collectionView.snp.top).inset(-45)
+        titleScreen.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(Metrics.titleScreenTopInset)
+            make.horizontalEdges.equalToSuperview().inset(Metrics.titleScreenHorizontalEdgesInset)
         }
         
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(titleScreenLabel.snp.bottom)
+            make.top.equalTo(titleScreen.snp.bottom)
             make.trailing.leading.equalToSuperview()
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         }

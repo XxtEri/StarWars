@@ -8,6 +8,16 @@
 import UIKit
 
 class CardInfoScreenCollectionViewCell: UICollectionViewCell {
+    
+    private enum Metrics {
+        static let titleCellSize: CGFloat = 24
+        static let cornerRadiusView: CGFloat = 35
+        static let titleCellLeadingTopBottonInset: CGFloat = 10
+        static let titleCellTrailingInset: CGFloat = 10
+        static let allowImageViewVerticalEdgesInset: CGFloat = 24
+        static let allowImageViewTrailingInset: CGFloat = 25.18
+    }
+    
     static let reuseIdentifier = "CardInfoScreenCollectionViewCell"
     
     lazy var imagePlanet: UIImageView = {
@@ -21,7 +31,7 @@ class CardInfoScreenCollectionViewCell: UICollectionViewCell {
     
     lazy var titleCell: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: label.font.fontName, size: 24)
+        label.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.titleCellSize)
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +39,7 @@ class CardInfoScreenCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var allowButton: UIImageView = {
+    lazy var allowImageView: UIImageView = {
         let image = UIImageView(image: UIImage(named: "SimpleAllow"))
         image.contentMode = .scaleAspectFit
         
@@ -41,7 +51,7 @@ class CardInfoScreenCollectionViewCell: UICollectionViewCell {
         
         self.addSubview(imagePlanet)
         self.addSubview(titleCell)
-        self.addSubview(allowButton)
+        self.addSubview(allowImageView)
         
         setup()
     }
@@ -59,11 +69,10 @@ private extension CardInfoScreenCollectionViewCell {
     func setup() {
         self.configureElement()
         self.configureConstants()
-        self.configureActions()
     }
     
     func configureElement() {
-        self.layer.cornerRadius = 35
+        self.layer.cornerRadius = Metrics.cornerRadiusView
         self.layer.masksToBounds = true
     }
     
@@ -73,22 +82,13 @@ private extension CardInfoScreenCollectionViewCell {
         })
         
         titleCell.snp.makeConstraints({ make in
-            make.leading.top.bottom.equalToSuperview().inset(10)
-            make.trailing.equalTo(self.allowButton.snp.leading).inset(10)
+            make.leading.top.bottom.equalToSuperview().inset(Metrics.titleCellLeadingTopBottonInset)
+            make.trailing.equalTo(self.allowImageView.snp.leading).inset(Metrics.titleCellTrailingInset)
         })
         
-        allowButton.snp.makeConstraints({ make in
-            make.top.bottom.equalToSuperview().inset(24)
-            make.trailing.equalToSuperview().inset(25.18)
+        allowImageView.snp.makeConstraints({ make in
+            make.verticalEdges.equalToSuperview().inset(Metrics.allowImageViewVerticalEdgesInset)
+            make.trailing.equalToSuperview().inset(Metrics.allowImageViewTrailingInset)
         })
-    }
-    
-    func configureActions() {
-        self.allowButton.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(pressAllow(paramSender:))))
-    }
-    
-    @objc
-    func pressAllow(paramSender: UIImageView) {
-        print("Press")
     }
 }

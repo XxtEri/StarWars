@@ -425,7 +425,6 @@ extension ApiRepository {
                 }
             }
             
-            print(response.value)
             guard let specie = response.value else {
                 completion(.failure(AFError.responseValidationFailed(reason: .dataFileNil)))
                 

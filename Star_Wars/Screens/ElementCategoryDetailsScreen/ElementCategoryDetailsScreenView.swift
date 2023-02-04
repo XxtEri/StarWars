@@ -19,8 +19,8 @@ class ElementCategoryDetailsScreenView: UIView {
         static let titleElementHorizontalEdgesInent: CGFloat = 10
         static let infoElementSize: CGFloat = 18
         static let infoElementTopInset: CGFloat = -35
-        static let infoElementLeadingInset: CGFloat = 30
-        static let infoElementTrailingInset: CGFloat = 43
+        static let infoElementLeadingInset: CGFloat = 25
+        static let infoElementTrailingInset: CGFloat = 25
     }
 
     lazy var titleElement: UILabel =  {

@@ -203,7 +203,7 @@ private extension ElementCategoryDetailsScreenPresenter {
     func loadSpecie() {
         guard let url = self.viewController?.elementUrl else { return }
         
-        self.interactor.getPlanetDetails(elementUrl: url) { result in
+        self.interactor.getSpecieDetails(elementUrl: url) { result in
             switch result {
             case .success(let elementCategoryDetails):
                 self.successLoadingHandle(with: elementCategoryDetails)

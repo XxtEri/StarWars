@@ -52,13 +52,13 @@ struct Specie: Decodable {
         self.hairColors = try container.decode(String.self, forKey: .hairColors)
         self.eyeColors = try container.decode(String.self, forKey: .eyeColors)
         self.averageLifespan = try container.decode(String.self, forKey: .averageLifespan)
-        self.homeworld = try container.decode(String.self, forKey: .homeworld)
+        self.homeworld = try container.decode(String?.self, forKey: .homeworld)
         self.language = try container.decode(String.self, forKey: .language)
         self.people = try container.decode([String].self, forKey: .people)
         self.films = try container.decode([String].self, forKey: .films)
         self.created = try container.decode(String.self, forKey: .created)
-        self.edited = try container.decode(String.self, forKey: .created)
-        self.url = try container.decode(String.self, forKey: .edited)
+        self.edited = try container.decode(String.self, forKey: .edited)
+        self.url = try container.decode(String.self, forKey: .url)
     }
 }
 

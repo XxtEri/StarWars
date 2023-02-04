@@ -15,6 +15,7 @@ protocol IApiRepository {
     func loadVehiclesList(completion: @escaping (Result<InfoVehicles, Error>) -> Void)
     func loadPlanetsList(completion: @escaping (Result<InfoPlanets, Error>) -> Void)
     func loadSpeciesList(completion: @escaping (Result<InfoSpecies, Error>) -> Void)
+    func load(completion: @escaping (Result<InfoSpecies, Error>) -> Void)
     
     func loadFilmDetails(elementUrl: String, completion: @escaping (Result<Film, Error>) -> Void)
     func loadCharacterDetails(elementUrl: String, completion: @escaping (Result<Character, Error>) -> Void)
@@ -192,6 +193,36 @@ extension ApiRepository: IApiRepository {
     
     //load species
     func loadSpeciesList(completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
+        self.session.request(self.baseURL + "species",
+                             method: .get,
+                             parameters: nil).responseDecodable(of: InfoSpecies.self) { response in
+            if let request = response.request {
+                
+                print("Request: \(request)")
+            }
+            
+            if let statusCode = response.response?.statusCode {
+                print("Status code: \(statusCode)")
+                guard statusCode != 400 else {
+                    return
+                }
+                
+                guard statusCode != 404 else {
+                    return
+                }
+            }
+
+            guard let characters = response.value else {
+                completion(.failure(AFError.responseValidationFailed(reason: .dataFileNil)))
+                
+                return
+            }
+            
+            completion(.success(characters))
+        }
+    }
+    
+    func load(completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
         self.session.request(self.baseURL + "species",
                              method: .get,
                              parameters: nil).responseDecodable(of: InfoSpecies.self) { response in
@@ -394,6 +425,7 @@ extension ApiRepository {
                 }
             }
             
+            print(response.value)
             guard let specie = response.value else {
                 completion(.failure(AFError.responseValidationFailed(reason: .dataFileNil)))
                 

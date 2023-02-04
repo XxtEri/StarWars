@@ -8,6 +8,10 @@
 protocol ICardInfoScreenInteractor {
     func getFilms(completion: @escaping (Result<InfoFilms, Error>) -> Void)
     func getCharacters(completion: @escaping (Result<InfoCharacters, Error>) -> Void)
+    func getStarships(completion: @escaping (Result<InfoStarships, Error>) -> Void)
+    func getVehicles(completion: @escaping (Result<InfoVehicles, Error>) -> Void)
+    func getPlanets(completion: @escaping (Result<InfoPlanets, Error>) -> Void)
+    func getSpecies(completion: @escaping (Result<InfoSpecies, Error>) -> Void)
 }
 
 final class CardInfoScreenInteractor {
@@ -25,5 +29,21 @@ extension CardInfoScreenInteractor: ICardInfoScreenInteractor {
     
     func getFilms(completion: @escaping (Result<InfoFilms, Error>) -> Void) {
         self.apiRepository.loadFilmsList(completion: completion)
+    }
+    
+    func getStarships(completion: @escaping (Result<InfoStarships, Error>) -> Void) {
+        self.apiRepository.loadStarshipsList(completion: completion)
+    }
+    
+    func getVehicles(completion: @escaping (Result<InfoVehicles, Error>) -> Void) {
+        self.apiRepository.loadVehiclesList(completion: completion)
+    }
+    
+    func getPlanets(completion: @escaping (Result<InfoPlanets, Error>) -> Void) {
+        self.apiRepository.loadPlanetsList(completion: completion)
+    }
+    
+    func getSpecies(completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
+        self.apiRepository.loadSpeciesList(completion: completion)
     }
 }

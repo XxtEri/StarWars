@@ -17,8 +17,9 @@ class CardInfoScreenView: UIView {
 
     private enum Metrics {
         static let titleScreenSize: CGFloat = 35
-        static let titleScreenTopInset: CGFloat = 90
         static let titleScreenHorizontalEdgesInset: CGFloat = 5
+        static let collectionViewTopInset: CGFloat = -45
+        static let collectionViewHorizontalEdgesInset: CGFloat = 14
     }
     
     lazy var titleScreen: UILabel = {
@@ -86,13 +87,13 @@ private extension CardInfoScreenView {
     
     func configureConstraints() {
         titleScreen.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(Metrics.titleScreenTopInset)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.horizontalEdges.equalToSuperview().inset(Metrics.titleScreenHorizontalEdgesInset)
         }
         
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(titleScreen.snp.bottom)
-            make.trailing.leading.equalToSuperview()
+            make.top.equalTo(titleScreen.snp.bottom).inset(Metrics.collectionViewTopInset)
+            make.horizontalEdges.equalToSuperview().inset(Metrics.collectionViewHorizontalEdgesInset)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         }
     }

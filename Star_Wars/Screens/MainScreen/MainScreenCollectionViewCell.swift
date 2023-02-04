@@ -11,7 +11,10 @@ class MainScreenCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "MainScreenCollectionViewCell"
     
     private enum Metrics {
-        
+        static let titleCardSize: CGFloat = 16
+        static let alphaComponent: CGFloat = 0.5
+        static let cornerRadiusView: CGFloat = 50
+        static let titleCardBottomInset: CGFloat = 15
     }
     
     private let colorsCard: [UIColor] = [.red, .yellow,
@@ -20,9 +23,9 @@ class MainScreenCollectionViewCell: UICollectionViewCell {
     
     lazy var titleCard: UILabel = {
         var label = UILabel()
-        label.font = UIFont(name: "Lexend-Bold", size: 16)
+        label.font = UIFont(name: TitleFonts.LexendBoldFont, size: Metrics.titleCardSize)
         label.textAlignment = .center
-        label.backgroundColor = .black.withAlphaComponent(0.5)
+        label.backgroundColor = .black.withAlphaComponent(Metrics.alphaComponent)
         
         return label
     }()
@@ -62,7 +65,7 @@ private extension MainScreenCollectionViewCell {
     }
     
     func configureCard() {
-        self.layer.cornerRadius = 50
+        self.layer.cornerRadius = Metrics.cornerRadiusView
         self.clipsToBounds = true
     }
     
@@ -73,7 +76,7 @@ private extension MainScreenCollectionViewCell {
         
         titleCard.snp.makeConstraints({ make in
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().inset(15)
+            make.bottom.equalToSuperview().inset(Metrics.titleCardBottomInset)
         })
     }
 }

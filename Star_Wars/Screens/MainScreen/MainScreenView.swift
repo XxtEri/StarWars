@@ -15,7 +15,8 @@ protocol IMainScreenView: UIView {
 
 final class MainScreenView: UIView {
     private enum Metrics {
-        
+        static let collectionViewLeadingInset: CGFloat = 22
+        static let collectionViewTrailingInset: CGFloat = 21
     }
     
     lazy var collectionView: UICollectionView = {
@@ -69,8 +70,8 @@ private extension MainScreenView {
     
     func configureConstraints() {
         self.collectionView.snp.makeConstraints({ make in
-            make.leading.equalToSuperview().inset(22)
-            make.trailing.equalToSuperview().inset(21)
+            make.leading.equalToSuperview().inset(Metrics.collectionViewLeadingInset)
+            make.trailing.equalToSuperview().inset(Metrics.collectionViewTrailingInset)
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         })

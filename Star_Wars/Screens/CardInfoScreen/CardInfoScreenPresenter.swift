@@ -8,7 +8,7 @@
 final class CardInfoScreenPresenter {
     private let interactor: ICardInfoScreenInteractor
     private let router: ICardInfoScreenRouter
-    private weak var viewController: ICardInfoScreenViewController?
+    private var viewController: ICardInfoScreenViewController?
     
     private var selectedCategory: Category
     private var isLoading = false
@@ -46,8 +46,6 @@ final class CardInfoScreenPresenter {
         case .species:
             loadSpecies()
         }
-
-
     }
 }
 
@@ -196,6 +194,8 @@ private extension CardInfoScreenPresenter {
     }
     
     func setHandlers() {
-        //отклик
+        self.viewController?.didSelectElementCategory = {[weak self] elementUrl in
+            self?.router.goToElementCardDetails(with: elementUrl)
+        }
     }
 }

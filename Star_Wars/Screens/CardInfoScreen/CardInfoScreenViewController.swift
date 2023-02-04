@@ -7,14 +7,16 @@
 
 import UIKit
 
-protocol ICardInfoScreenViewController: AnyObject {
+protocol ICardInfoScreenViewController {
+    var didSelectElementCategory: ((String) -> Void)? {get set}
+    
     func setTitle(title: String)
     func setElementsCardArray(with models: [CardInfoScreenModel])
     func showError(_ error: Error)
 }
 
 class CardInfoScreenViewController: UIViewController {
-    
+
     private enum Metrics {
         static let itemsInRow = 1
         static let cellHeight: CGFloat = 65
@@ -27,6 +29,8 @@ class CardInfoScreenViewController: UIViewController {
     private var presenter: CardInfoScreenPresenter
     private var ui: ICardInfoScreenView
     private var elementsCardArray = [CardInfoScreenModel]()
+    
+    var didSelectElementCategory: ((String) -> Void)?
     
     init(presenter: CardInfoScreenPresenter) {
         self.presenter = presenter
@@ -125,8 +129,10 @@ extension CardInfoScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
+        self.didSelectElementCategory?(self.elementsCardArray[indexPath.row].elementUrl)
     }
     
+    //для пагинации
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if ((scrollView.contentOffset.y + scrollView.frame.size.height + Metrics.cellHeight) > scrollView.contentSize.height) {
                //eqweqw

@@ -13,7 +13,7 @@ enum CardInfoScreenAssembly {
     }
     
     struct Parameters {
-        let completionHandler: ((Int) -> Void)
+        let completionHandler: ((String) -> Void)
         let selectedCategory: Category
     }
     

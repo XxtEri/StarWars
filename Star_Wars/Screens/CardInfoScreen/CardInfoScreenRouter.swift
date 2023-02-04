@@ -6,19 +6,19 @@
 //
 
 protocol ICardInfoScreenRouter {
-    func goToElementCardDetails(with elementId: Int)
+    func goToElementCardDetails(with elementUrl: String)
 }
 
 final class CardInfoScreenRouter {
-    private var completionHandler: ((Int) -> Void)?
+    private var completionHandler: ((String) -> Void)?
     
-    init(completionHandler: ((Int) -> Void)?) {
+    init(completionHandler: ((String) -> Void)?) {
         self.completionHandler = completionHandler
     }
 }
 
 extension CardInfoScreenRouter: ICardInfoScreenRouter {
-    func goToElementCardDetails(with elementId: Int) {
-        self.completionHandler?(elementId)
+    func goToElementCardDetails(with elementUrl: String) {
+        self.completionHandler?(elementUrl)
     }
 }

@@ -11,6 +11,7 @@ protocol IScreensFactory {
     func makeFirstScreen(with parameters: FirstScreenAssembly.Parameters) -> UIViewController
     func makeMainScreen(with parameters: MainScreenAssembly.Parameters) -> UIViewController
     func makeCardInfoScreen(with parameters: CardInfoScreenAssembly.Parameters) -> UIViewController
+    func makeElementCategoryDetailsScreen(with parameters: ElementCategoryDetailsScreenAssembly.Parameters) -> UIViewController
 }
 
 final class ScreensFactory {
@@ -38,6 +39,14 @@ extension ScreensFactory: IScreensFactory {
         let dependencies = CardInfoScreenAssembly.Dependencies(apiRepository: self.apiRepository)
         
         let vc = CardInfoScreenAssembly.build(with: parameters, and: dependencies)
+        
+        return vc
+    }
+    
+    func makeElementCategoryDetailsScreen(with parameters: ElementCategoryDetailsScreenAssembly.Parameters) -> UIViewController {
+        let dependencies = ElementCategoryDetailsScreenAssembly.Dependencies(apirepository: self.apiRepository)
+        
+        let vc = ElementCategoryDetailsScreenAssembly.build(with: parameters, and: dependencies)
         
         return vc
     }

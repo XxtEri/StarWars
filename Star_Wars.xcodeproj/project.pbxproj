@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F347C12A298B66F10035A90A /* TitleScreenEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C129298B66F10035A90A /* TitleScreenEnum.swift */; };
 		F347C12C298BB3C80035A90A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12B298BB3C80035A90A /* Character.swift */; };
-		F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */; };
 		F347C142298CDAEE0035A90A /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */; };
 		F347C144298CDAF90035A90A /* Spartan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C143298CDAF90035A90A /* Spartan.ttf */; };
 		F347C149298CDBE90035A90A /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C148298CDBE90035A90A /* MainRouter.swift */; };
@@ -35,8 +33,13 @@
 		F347C17C298D34BA0035A90A /* CardInfoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */; };
 		F347C17E298D34C50035A90A /* CardInfoScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */; };
 		F347C180298D3F8C0035A90A /* CardInfoScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */; };
+		F347C183298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C182298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift */; };
+		F347C185298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C184298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift */; };
+		F347C187298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C186298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift */; };
+		F347C189298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */; };
+		F347C18B298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */; };
+		F347C18D298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */; };
 		F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */; };
-		F37BD71F298A515E00D197EA /* ModelViewMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */; };
 		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
 		F37BD724298A90EB00D197EA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD723298A90EB00D197EA /* Film.swift */; };
 		F37BD726298A933700D197EA /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD725298A933700D197EA /* Specie.swift */; };
@@ -52,9 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F347C129298B66F10035A90A /* TitleScreenEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenEnum.swift; sourceTree = "<group>"; };
 		F347C12B298BB3C80035A90A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovelViewCardScreen.swift; sourceTree = "<group>"; };
 		F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lexend-Bold.ttf"; path = "../../../../../../../Downloads/Lexend/Lexend-Bold.ttf"; sourceTree = "<group>"; };
 		F347C143298CDAF90035A90A /* Spartan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Spartan.ttf; path = ../../../../../../../Downloads/Spartan/Spartan.ttf; sourceTree = "<group>"; };
 		F347C148298CDBE90035A90A /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -80,8 +81,13 @@
 		F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenPresenter.swift; sourceTree = "<group>"; };
 		F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenRouter.swift; sourceTree = "<group>"; };
 		F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenInteractor.swift; sourceTree = "<group>"; };
+		F347C182298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C184298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenModel.swift; sourceTree = "<group>"; };
+		F347C186298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenView.swift; sourceTree = "<group>"; };
+		F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenViewController.swift; sourceTree = "<group>"; };
+		F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenPresenter.swift; sourceTree = "<group>"; };
+		F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenInteractor.swift; sourceTree = "<group>"; };
 		F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfoElementCard.swift; sourceTree = "<group>"; };
-		F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewMainScreen.swift; sourceTree = "<group>"; };
 		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F37BD725298A933700D197EA /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
 		F37BD729298A947300D197EA /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
@@ -109,14 +115,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F347C128298B66C70035A90A /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				F347C129298B66F10035A90A /* TitleScreenEnum.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		F347C13A298BF0F50035A90A /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +140,7 @@
 				F3F646A929888BE40054C3B3 /* FirstScreen */,
 				F37BD6FB298A1DC000D197EA /* MainScreen */,
 				F37BD713298A4DB800D197EA /* CardInfoScreen */,
-				F37BD719298A4FFE00D197EA /* InfoElementCard */,
+				F37BD719298A4FFE00D197EA /* ElementCategoryDetailsScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -185,6 +183,14 @@
 			path = ModelsDTO;
 			sourceTree = "<group>";
 		};
+		F347C181298DEA5B0035A90A /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
 		F37BD6FA298A1DA300D197EA /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,21 +229,18 @@
 			path = CardInfoScreen;
 			sourceTree = "<group>";
 		};
-		F37BD719298A4FFE00D197EA /* InfoElementCard */ = {
+		F37BD719298A4FFE00D197EA /* ElementCategoryDetailsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */,
+				F347C182298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift */,
+				F347C184298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift */,
+				F347C186298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift */,
+				F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */,
+				F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */,
+				F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */,
+				F347C181298DEA5B0035A90A /* Delete */,
 			);
-			path = InfoElementCard;
-			sourceTree = "<group>";
-		};
-		F37BD71D298A514100D197EA /* ModelView */ = {
-			isa = PBXGroup;
-			children = (
-				F37BD71E298A515E00D197EA /* ModelViewMainScreen.swift */,
-				F347C12D298BC5C40035A90A /* MovelViewCardScreen.swift */,
-			);
-			path = ModelView;
+			path = ElementCategoryDetailsScreen;
 			sourceTree = "<group>";
 		};
 		F3F6467929868F6E0054C3B3 = {
@@ -263,8 +266,6 @@
 				F347C147298CDBC30035A90A /* BusinessLogic */,
 				F347C14A298CDF2E0035A90A /* Services */,
 				F347C145298CDB0C0035A90A /* Screens */,
-				F37BD71D298A514100D197EA /* ModelView */,
-				F347C128298B66C70035A90A /* UseCases */,
 				F347C140298CDA9A0035A90A /* Resources */,
 				F3F6468B29868F6E0054C3B3 /* Main.storyboard */,
 				F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */,
@@ -372,13 +373,13 @@
 				F347C14F298CE0050035A90A /* ApiRepository.swift in Sources */,
 				F347C149298CDBE90035A90A /* MainRouter.swift in Sources */,
 				F347C165298D07DD0035A90A /* MainScreenAssembly.swift in Sources */,
-				F37BD71F298A515E00D197EA /* ModelViewMainScreen.swift in Sources */,
 				F347C12C298BB3C80035A90A /* Character.swift in Sources */,
+				F347C183298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift in Sources */,
+				F347C18B298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift in Sources */,
 				F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */,
 				F347C163298D07C30035A90A /* MainScreenViewController.swift in Sources */,
 				F347C17E298D34C50035A90A /* CardInfoScreenRouter.swift in Sources */,
 				F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */,
-				F347C12E298BC5C40035A90A /* MovelViewCardScreen.swift in Sources */,
 				F347C178298D346A0035A90A /* CardInfoScreenViewController.swift in Sources */,
 				F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */,
 				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
@@ -389,6 +390,7 @@
 				F347C16D298D087A0035A90A /* MainScreenRouter.swift in Sources */,
 				F37BD72A298A947300D197EA /* Planets.swift in Sources */,
 				F347C172298D34340035A90A /* CardInfoScreenAssembly.swift in Sources */,
+				F347C187298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
 				F347C153298CE0A00035A90A /* FirstScreenView.swift in Sources */,
 				F347C158298CE85C0035A90A /* FirstScreenPresenter.swift in Sources */,
@@ -397,10 +399,12 @@
 				F347C180298D3F8C0035A90A /* CardInfoScreenInteractor.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
 				F37BD726298A933700D197EA /* Specie.swift in Sources */,
-				F347C12A298B66F10035A90A /* TitleScreenEnum.swift in Sources */,
+				F347C18D298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift in Sources */,
 				F347C17A298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift in Sources */,
 				F37BD724298A90EB00D197EA /* Film.swift in Sources */,
+				F347C189298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift in Sources */,
 				F347C17C298D34BA0035A90A /* CardInfoScreenPresenter.swift in Sources */,
+				F347C185298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,6 @@ class CardInfoScreenView: UIView {
     
     lazy var titleScreenLabel: UILabel = {
         let label = UILabel()
-        label.text = "HAHHA"
         label.textColor = .yellow
         label.textAlignment = .center
         label.font = UIFont(name: "Spartan", size: 35)

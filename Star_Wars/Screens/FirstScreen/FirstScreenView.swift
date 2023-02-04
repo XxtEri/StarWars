@@ -34,7 +34,7 @@ class FirstScreenView: UIView {
     private lazy var textLabel: UILabel = {
         let view = UILabel()
         view.text = "Explore the Star Wars universe"
-        view.font = UIFont(name: "Lexend-Bold", size: Metrics.sizeText)
+        view.font = UIFont(name: TitleFonts.LexendBoldFont, size: Metrics.sizeText)
         view.textColor = .white
         view.textAlignment = .center
         view.numberOfLines = .min

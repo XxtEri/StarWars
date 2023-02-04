@@ -46,8 +46,5 @@ private extension FirstScreenViewController {
             self.didSelectNextScreenHandler?()
             
         }
-//        let view = ViewControllerMainScreen()
-//        view.navigationItem.setHidesBackButton(true, animated: false)
-//        self.navigationController?.pushViewController(view, animated: true)
     }
 }

@@ -39,6 +39,7 @@
 		F347C189298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */; };
 		F347C18B298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */; };
 		F347C18D298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */; };
+		F347C193298E36CB0035A90A /* TitleFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C192298E36CB0035A90A /* TitleFonts.swift */; };
 		F37BD71C298A503700D197EA /* ViewControllerInfoElementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */; };
 		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
 		F37BD724298A90EB00D197EA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD723298A90EB00D197EA /* Film.swift */; };
@@ -87,6 +88,7 @@
 		F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenViewController.swift; sourceTree = "<group>"; };
 		F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenPresenter.swift; sourceTree = "<group>"; };
 		F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenInteractor.swift; sourceTree = "<group>"; };
+		F347C192298E36CB0035A90A /* TitleFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleFonts.swift; path = Star_Wars/Resources/TitleFonts.swift; sourceTree = SOURCE_ROOT; };
 		F37BD71B298A503700D197EA /* ViewControllerInfoElementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfoElementCard.swift; sourceTree = "<group>"; };
 		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F37BD725298A933700D197EA /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				F347C143298CDAF90035A90A /* Spartan.ttf */,
 				F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */,
+				F347C192298E36CB0035A90A /* TitleFonts.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				F347C17E298D34C50035A90A /* CardInfoScreenRouter.swift in Sources */,
 				F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */,
 				F347C178298D346A0035A90A /* CardInfoScreenViewController.swift in Sources */,
+				F347C193298E36CB0035A90A /* TitleFonts.swift in Sources */,
 				F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */,
 				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
 				F347C176298D345B0035A90A /* CardInfoScreenView.swift in Sources */,

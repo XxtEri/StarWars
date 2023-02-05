@@ -39,6 +39,7 @@ class ElementCategoryDetailsScreenView: UIView {
         view.textColor = .white
         view.textAlignment = .left
         view.backgroundColor = .black
+        view.isEditable = false
         view.font = UIFont(name: TitleFonts.spartanFont, size: Metrics.infoElementSize)
         return view
     }()

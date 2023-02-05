@@ -62,6 +62,7 @@ private extension MainRouter {
                                                            selectedCategory: selectedCategory)
         let viewController = self.screenFactory.makeCardInfoScreen(with: parameters)
         
+        self.navigationController?.navigationBar.tintColor = .yellow
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -69,6 +70,7 @@ private extension MainRouter {
         let parameters = ElementCategoryDetailsScreenAssembly.Parameters(selectedCategory: selectedCategory, elementUrl: elementUrl)
         let viewController = self.screenFactory.makeElementCategoryDetailsScreen(with: parameters)
         
+        self.navigationController?.navigationBar.tintColor = .yellow
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

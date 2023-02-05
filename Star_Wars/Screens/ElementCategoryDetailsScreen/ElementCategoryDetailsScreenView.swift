@@ -16,7 +16,8 @@ class ElementCategoryDetailsScreenView: UIView {
     
     private enum Metrics {
         static let titleElementSize: CGFloat = 30
-        static let titleElementHorizontalEdgesInent: CGFloat = 10
+        static let titleElementHorizontalEdgesInsent: CGFloat = 10
+        static let titleElementTopInsent: CGFloat = 10
         static let infoElementSize: CGFloat = 18
         static let infoElementTopInset: CGFloat = -35
         static let infoElementLeadingInset: CGFloat = 25
@@ -27,6 +28,7 @@ class ElementCategoryDetailsScreenView: UIView {
         let view = UILabel()
         view.textColor = .yellow
         view.textAlignment = .center
+        view.numberOfLines = .max
         view.font = UIFont(name: TitleFonts.spartanFont, size: Metrics.titleElementSize)
 
         return view
@@ -75,8 +77,8 @@ private extension ElementCategoryDetailsScreenView {
     
     func configureConstraints() {
         titleElement.snp.makeConstraints({ make in
-            make.horizontalEdges.equalToSuperview().inset(Metrics.titleElementHorizontalEdgesInent)
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top)
+            make.horizontalEdges.equalToSuperview().inset(Metrics.titleElementHorizontalEdgesInsent)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).inset(Metrics.titleElementTopInsent)
         })
         
         infoElement.snp.makeConstraints({ make in

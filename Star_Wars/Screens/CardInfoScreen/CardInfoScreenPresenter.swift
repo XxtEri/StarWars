@@ -30,8 +30,6 @@ final class CardInfoScreenPresenter {
     }
     
     func loadElementsCard() {
-        self.isLoading = true
-        
         switch selectedCategory {
         case .characters:
             loadCharacters()
@@ -52,12 +50,16 @@ final class CardInfoScreenPresenter {
 //MARK: - Method load list of films
 private extension CardInfoScreenPresenter {
     func loadFilms() {
-        self.interactor.getFilms { result in
-            switch result {
-            case .success(let data):
-                self.successLoadingHandle(with: data.results)
-            case .failure(let error):
-                self.failureLoadingHandle(with: error)
+        if !self.isLoading {
+            self.isLoading = true
+            
+            self.interactor.getFilms { result in
+                switch result {
+                case .success(let data):
+                    self.successLoadingHandle(with: data.results)
+                case .failure(let error):
+                    self.failureLoadingHandle(with: error)
+                }
             }
         }
     }
@@ -67,7 +69,7 @@ private extension CardInfoScreenPresenter {
             CardInfoScreenModel (elementUrl: $0.url, titleName: $0.name)
         }
         
-        self.viewController?.setElementsCardArray(with: elementsCard)
+        self.viewController?.addNewElementsCard(with: elementsCard)
         self.isLoading = false
     }
 }
@@ -75,12 +77,16 @@ private extension CardInfoScreenPresenter {
 //MARK: - Method load list of characters
 private extension CardInfoScreenPresenter {
     func loadCharacters() {
-        self.interactor.getCharacters { result in
-            switch result {
-            case .success(let data):
-                self.successLoadingHandle(with: data.results)
-            case .failure(let error):
-                self.failureLoadingHandle(with: error)
+        if !self.isLoading {
+            self.isLoading = true
+            
+            self.interactor.getCharacters { result in
+                switch result {
+                case .success(let data):
+                    self.successLoadingHandle(with: data.results)
+                case .failure(let error):
+                    self.failureLoadingHandle(with: error)
+                }
             }
         }
     }
@@ -90,7 +96,7 @@ private extension CardInfoScreenPresenter {
             CardInfoScreenModel (elementUrl: $0.url, titleName: $0.name)
         }
         
-        self.viewController?.setElementsCardArray(with: elementsCard)
+        self.viewController?.addNewElementsCard(with: elementsCard)
         self.isLoading = false
     }
 }
@@ -98,12 +104,16 @@ private extension CardInfoScreenPresenter {
 //MARK: - Method load list of starships
 private extension CardInfoScreenPresenter {
     func loadStarships() {
-        self.interactor.getStarships { result in
-            switch result {
-            case .success(let data):
-                self.successLoadingHandle(with: data.results)
-            case .failure(let error):
-                self.failureLoadingHandle(with: error)
+        if !self.isLoading {
+            self.isLoading = true
+            
+            self.interactor.getStarships { result in
+                switch result {
+                case .success(let data):
+                    self.successLoadingHandle(with: data.results)
+                case .failure(let error):
+                    self.failureLoadingHandle(with: error)
+                }
             }
         }
     }
@@ -113,7 +123,7 @@ private extension CardInfoScreenPresenter {
             CardInfoScreenModel (elementUrl: $0.url, titleName: $0.name)
         }
         
-        self.viewController?.setElementsCardArray(with: elementsCard)
+        self.viewController?.addNewElementsCard(with: elementsCard)
         self.isLoading = false
     }
 }
@@ -121,12 +131,16 @@ private extension CardInfoScreenPresenter {
 //MARK: - Method load list of vehicles
 private extension CardInfoScreenPresenter {
     func loadVehicles() {
-        self.interactor.getVehicles { result in
-            switch result {
-            case .success(let data):
-                self.successLoadingHandle(with: data.results)
-            case .failure(let error):
-                self.failureLoadingHandle(with: error)
+        if !self.isLoading {
+            self.isLoading = true
+            
+            self.interactor.getVehicles { result in
+                switch result {
+                case .success(let data):
+                    self.successLoadingHandle(with: data.results)
+                case .failure(let error):
+                    self.failureLoadingHandle(with: error)
+                }
             }
         }
     }
@@ -136,7 +150,7 @@ private extension CardInfoScreenPresenter {
             CardInfoScreenModel (elementUrl: $0.url, titleName: $0.name)
         }
         
-        self.viewController?.setElementsCardArray(with: elementsCard)
+        self.viewController?.addNewElementsCard(with: elementsCard)
         self.isLoading = false
     }
 }
@@ -144,12 +158,16 @@ private extension CardInfoScreenPresenter {
 //MARK: - Method load list of planets
 private extension CardInfoScreenPresenter {
     func loadPlanets() {
-        self.interactor.getPlanets { result in
-            switch result {
-            case .success(let data):
-                self.successLoadingHandle(with: data.results)
-            case .failure(let error):
-                self.failureLoadingHandle(with: error)
+        if !self.isLoading {
+            self.isLoading = true
+            
+            self.interactor.getPlanets { result in
+                switch result {
+                case .success(let data):
+                    self.successLoadingHandle(with: data.results)
+                case .failure(let error):
+                    self.failureLoadingHandle(with: error)
+                }
             }
         }
     }
@@ -159,7 +177,7 @@ private extension CardInfoScreenPresenter {
             CardInfoScreenModel (elementUrl: $0.url, titleName: $0.name)
         }
         
-        self.viewController?.setElementsCardArray(with: elementsCard)
+        self.viewController?.addNewElementsCard(with: elementsCard)
         self.isLoading = false
     }
 }
@@ -167,12 +185,15 @@ private extension CardInfoScreenPresenter {
 //MARK: - Method load list of species
 private extension CardInfoScreenPresenter {
     func loadSpecies() {
-        self.interactor.getSpecies { result in
-            switch result {
-            case .success(let data):
-                self.successLoadingHandle(with: data.results)
-            case .failure(let error):
-                self.failureLoadingHandle(with: error)
+        if !self.isLoading {
+            self.isLoading = true
+            self.interactor.getSpecies { result in
+                switch result {
+                case .success(let data):
+                    self.successLoadingHandle(with: data.results)
+                case .failure(let error):
+                    self.failureLoadingHandle(with: error)
+                }
             }
         }
     }
@@ -182,7 +203,7 @@ private extension CardInfoScreenPresenter {
             CardInfoScreenModel (elementUrl: $0.url, titleName: $0.name)
         }
         
-        self.viewController?.setElementsCardArray(with: elementsCard)
+        self.viewController?.addNewElementsCard(with: elementsCard)
         self.isLoading = false
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 protocol ICardInfoScreenView: UIView {
     func setTitleScreen(titleScreen: String)
-    func reloadCollectionView()
+    func reloadCollectionViewData()
     func setupCollectionView(delegate: UICollectionViewDelegate, dataOutput: UICollectionViewDataSource)
 }
 
@@ -62,7 +62,7 @@ extension CardInfoScreenView: ICardInfoScreenView {
         self.titleScreen.text = titleScreen
     }
     
-    func reloadCollectionView() {
+    func reloadCollectionViewData() {
         self.collectionView.reloadData()
     }
     

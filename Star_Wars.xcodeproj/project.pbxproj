@@ -40,6 +40,7 @@
 		F347C18B298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */; };
 		F347C18D298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */; };
 		F347C193298E36CB0035A90A /* TitleFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C192298E36CB0035A90A /* TitleFonts.swift */; };
+		F347C198298F2BC40035A90A /* CardInfoScreenQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C197298F2BC40035A90A /* CardInfoScreenQuery.swift */; };
 		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
 		F37BD724298A90EB00D197EA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD723298A90EB00D197EA /* Film.swift */; };
 		F37BD726298A933700D197EA /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD725298A933700D197EA /* Specie.swift */; };
@@ -88,6 +89,7 @@
 		F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenPresenter.swift; sourceTree = "<group>"; };
 		F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenInteractor.swift; sourceTree = "<group>"; };
 		F347C192298E36CB0035A90A /* TitleFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleFonts.swift; path = Star_Wars/Resources/TitleFonts.swift; sourceTree = SOURCE_ROOT; };
+		F347C197298F2BC40035A90A /* CardInfoScreenQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenQuery.swift; sourceTree = "<group>"; };
 		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		F37BD725298A933700D197EA /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
 		F37BD729298A947300D197EA /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F347C14C298CDFA50035A90A /* ModelsDTO */,
+				F347C196298F2BA20035A90A /* Query */,
 				F347C14E298CE0050035A90A /* ApiRepository.swift */,
 			);
 			path = Api;
@@ -182,6 +185,14 @@
 				F37BD729298A947300D197EA /* Planets.swift */,
 			);
 			path = ModelsDTO;
+			sourceTree = "<group>";
+		};
+		F347C196298F2BA20035A90A /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				F347C197298F2BC40035A90A /* CardInfoScreenQuery.swift */,
+			);
+			path = Query;
 			sourceTree = "<group>";
 		};
 		F37BD6FA298A1DA300D197EA /* Application */ = {
@@ -365,6 +376,7 @@
 				F347C149298CDBE90035A90A /* MainRouter.swift in Sources */,
 				F347C165298D07DD0035A90A /* MainScreenAssembly.swift in Sources */,
 				F347C12C298BB3C80035A90A /* Character.swift in Sources */,
+				F347C198298F2BC40035A90A /* CardInfoScreenQuery.swift in Sources */,
 				F347C183298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift in Sources */,
 				F347C18B298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift in Sources */,
 				F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */,

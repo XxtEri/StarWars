@@ -17,6 +17,8 @@ protocol ICardInfoScreenInteractor {
 final class CardInfoScreenInteractor {
     private let apiRepository: IApiRepository
     
+    private var page = 1
+    
     init(apiRepository: IApiRepository) {
         self.apiRepository = apiRepository
     }
@@ -24,26 +26,44 @@ final class CardInfoScreenInteractor {
 
 extension CardInfoScreenInteractor: ICardInfoScreenInteractor {
     func getCharacters(completion: @escaping (Result<InfoCharacters, Error>) -> Void) {
-        self.apiRepository.loadCharacterList(completion: completion)
+        let query = CardInfoScreenQuery(page: self.page)
+        self.page += 1
+        
+        self.apiRepository.loadCharacterList(query: query, completion: completion)
     }
     
     func getFilms(completion: @escaping (Result<InfoFilms, Error>) -> Void) {
-        self.apiRepository.loadFilmsList(completion: completion)
+        let query = CardInfoScreenQuery(page: self.page)
+        self.page += 1
+        
+        self.apiRepository.loadFilmsList(query: query, completion: completion)
     }
     
     func getStarships(completion: @escaping (Result<InfoStarships, Error>) -> Void) {
-        self.apiRepository.loadStarshipsList(completion: completion)
+        let query = CardInfoScreenQuery(page: self.page)
+        self.page += 1
+        
+        self.apiRepository.loadStarshipsList(query: query, completion: completion)
     }
     
     func getVehicles(completion: @escaping (Result<InfoVehicles, Error>) -> Void) {
-        self.apiRepository.loadVehiclesList(completion: completion)
+        let query = CardInfoScreenQuery(page: self.page)
+        self.page += 1
+        
+        self.apiRepository.loadVehiclesList(query: query, completion: completion)
     }
     
     func getPlanets(completion: @escaping (Result<InfoPlanets, Error>) -> Void) {
-        self.apiRepository.loadPlanetsList(completion: completion)
+        let query = CardInfoScreenQuery(page: self.page)
+        self.page += 1
+        
+        self.apiRepository.loadPlanetsList(query: query, completion: completion)
     }
     
     func getSpecies(completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
-        self.apiRepository.loadSpeciesList(completion: completion)
+        let query = CardInfoScreenQuery(page: self.page)
+        self.page += 1
+        
+        self.apiRepository.loadSpeciesList(query: query, completion: completion)
     }
 }

@@ -11,7 +11,7 @@ protocol ICardInfoScreenViewController {
     var didSelectElementCategory: ((String) -> Void)? {get set}
     
     func setTitle(title: String)
-    func setElementsCardArray(with models: [CardInfoScreenModel])
+    func addNewElementsCard(with models: [CardInfoScreenModel])
     func showError(_ error: Error)
 }
 
@@ -56,11 +56,6 @@ class CardInfoScreenViewController: UIViewController {
         self.presenter.loadElementsCard()
     }
     
-    @objc
-    private func performAdd(param: UIBarButtonItem) {
-        print("Ha")
-    }
-    
 }
 
 extension CardInfoScreenViewController: ICardInfoScreenViewController {
@@ -68,11 +63,11 @@ extension CardInfoScreenViewController: ICardInfoScreenViewController {
         self.ui.setTitleScreen(titleScreen: title)
     }
     
-    func setElementsCardArray(with models: [CardInfoScreenModel]) {
+    func addNewElementsCard(with models: [CardInfoScreenModel]) {
         self.elementsCardArray.append(contentsOf: models)
 
         DispatchQueue.main.async { [weak self] in
-            self?.ui.reloadCollectionView()
+            self?.ui.reloadCollectionViewData()
         }
     }
     
@@ -140,7 +135,7 @@ extension CardInfoScreenViewController: UICollectionViewDelegate {
     //для пагинации
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if ((scrollView.contentOffset.y + scrollView.frame.size.height + Metrics.cellHeight) > scrollView.contentSize.height) {
-               //eqweqw
+            self.presenter.loadElementsCard()
         }
     }
 }

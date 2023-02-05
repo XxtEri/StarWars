@@ -9,13 +9,12 @@ import Foundation
 import Alamofire
 
 protocol IApiRepository {
-    func loadFilmsList(completion: @escaping (Result<InfoFilms, Error>) -> Void)
-    func loadCharacterList(completion: @escaping (Result<InfoCharacters, Error>) -> Void)
-    func loadStarshipsList(completion: @escaping (Result<InfoStarships, Error>) -> Void)
-    func loadVehiclesList(completion: @escaping (Result<InfoVehicles, Error>) -> Void)
-    func loadPlanetsList(completion: @escaping (Result<InfoPlanets, Error>) -> Void)
-    func loadSpeciesList(completion: @escaping (Result<InfoSpecies, Error>) -> Void)
-    func load(completion: @escaping (Result<InfoSpecies, Error>) -> Void)
+    func loadFilmsList(query: CardInfoScreenQuery?, completion: @escaping (Result<InfoFilms, Error>) -> Void)
+    func loadCharacterList(query: CardInfoScreenQuery?, completion: @escaping (Result<InfoCharacters, Error>) -> Void)
+    func loadStarshipsList(query: CardInfoScreenQuery?, completion: @escaping (Result<InfoStarships, Error>) -> Void)
+    func loadVehiclesList(query: CardInfoScreenQuery?, completion: @escaping (Result<InfoVehicles, Error>) -> Void)
+    func loadPlanetsList(query: CardInfoScreenQuery?, completion: @escaping (Result<InfoPlanets, Error>) -> Void)
+    func loadSpeciesList(query: CardInfoScreenQuery?, completion: @escaping (Result<InfoSpecies, Error>) -> Void)
     
     func loadFilmDetails(elementUrl: String, completion: @escaping (Result<Film, Error>) -> Void)
     func loadCharacterDetails(elementUrl: String, completion: @escaping (Result<Character, Error>) -> Void)
@@ -38,7 +37,7 @@ final class ApiRepository {
 //MARK: -load list of category
 extension ApiRepository: IApiRepository {
     //load films
-    func loadFilmsList(completion: @escaping (Result<InfoFilms, Error>) -> Void) {
+    func loadFilmsList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoFilms, Error>) -> Void) {
         self.session.request(self.baseURL + "films",
                              method: .get,
                              parameters: nil).responseDecodable(of: InfoFilms.self) { response in
@@ -68,7 +67,7 @@ extension ApiRepository: IApiRepository {
     }
     
     //load characters
-    func loadCharacterList(completion: @escaping (Result<InfoCharacters, Error>) -> Void) {
+    func loadCharacterList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoCharacters, Error>) -> Void) {
         self.session.request(self.baseURL + "people",
                              method: .get,
                              parameters: nil).responseDecodable(of: InfoCharacters.self) { response in
@@ -99,7 +98,7 @@ extension ApiRepository: IApiRepository {
     }
     
     //load starchips
-    func loadStarshipsList(completion: @escaping (Result<InfoStarships, Error>) -> Void) {
+    func loadStarshipsList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoStarships, Error>) -> Void) {
         self.session.request(self.baseURL + "starships",
                              method: .get,
                              parameters: nil).responseDecodable(of: InfoStarships.self) { response in
@@ -130,7 +129,7 @@ extension ApiRepository: IApiRepository {
     }
     
     //load vehicles
-    func loadVehiclesList(completion: @escaping (Result<InfoVehicles, Error>) -> Void) {
+    func loadVehiclesList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoVehicles, Error>) -> Void) {
         self.session.request(self.baseURL + "vehicles",
                              method: .get,
                              parameters: nil).responseDecodable(of: InfoVehicles.self) { response in
@@ -161,7 +160,7 @@ extension ApiRepository: IApiRepository {
     }
     
     //load planets
-    func loadPlanetsList(completion: @escaping (Result<InfoPlanets, Error>) -> Void) {
+    func loadPlanetsList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoPlanets, Error>) -> Void) {
         self.session.request(self.baseURL + "planets",
                              method: .get,
                              parameters: nil).responseDecodable(of: InfoPlanets.self) { response in
@@ -192,7 +191,7 @@ extension ApiRepository: IApiRepository {
     }
     
     //load species
-    func loadSpeciesList(completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
+    func loadSpeciesList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
         self.session.request(self.baseURL + "species",
                              method: .get,
                              parameters: nil).responseDecodable(of: InfoSpecies.self) { response in
@@ -212,36 +211,6 @@ extension ApiRepository: IApiRepository {
                 }
             }
 
-            guard let characters = response.value else {
-                completion(.failure(AFError.responseValidationFailed(reason: .dataFileNil)))
-                
-                return
-            }
-            
-            completion(.success(characters))
-        }
-    }
-    
-    func load(completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
-        self.session.request(self.baseURL + "species",
-                             method: .get,
-                             parameters: nil).responseDecodable(of: InfoSpecies.self) { response in
-            if let request = response.request {
-                
-                print("Request: \(request)")
-            }
-            
-            if let statusCode = response.response?.statusCode {
-                print("Status code: \(statusCode)")
-                guard statusCode != 400 else {
-                    return
-                }
-                
-                guard statusCode != 404 else {
-                    return
-                }
-            }
-            
             guard let characters = response.value else {
                 completion(.failure(AFError.responseValidationFailed(reason: .dataFileNil)))
                 

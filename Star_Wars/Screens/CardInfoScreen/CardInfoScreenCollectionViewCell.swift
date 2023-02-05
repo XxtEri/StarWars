@@ -32,7 +32,7 @@ class CardInfoScreenCollectionViewCell: UICollectionViewCell {
     
     lazy var titleCell: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.titleCellSize)
+        label.font = UIFont(name: TitleFonts.spartanFont, size: Metrics.titleCellSize)
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false

@@ -23,7 +23,7 @@ class MainScreenCollectionViewCell: UICollectionViewCell {
     
     lazy var titleCard: UILabel = {
         var label = UILabel()
-        label.font = UIFont(name: TitleFonts.LexendBoldFont, size: Metrics.titleCardSize)
+        label.font = UIFont(name: TitleFonts.lexendBoldFont, size: Metrics.titleCardSize)
         label.textAlignment = .center
         label.backgroundColor = .black.withAlphaComponent(Metrics.alphaComponent)
         

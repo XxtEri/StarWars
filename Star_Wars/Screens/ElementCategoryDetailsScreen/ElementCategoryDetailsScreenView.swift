@@ -27,7 +27,7 @@ class ElementCategoryDetailsScreenView: UIView {
         let view = UILabel()
         view.textColor = .yellow
         view.textAlignment = .center
-        view.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.titleElementSize)
+        view.font = UIFont(name: TitleFonts.spartanFont, size: Metrics.titleElementSize)
 
         return view
     }()
@@ -37,7 +37,7 @@ class ElementCategoryDetailsScreenView: UIView {
         view.textColor = .white
         view.textAlignment = .left
         view.backgroundColor = .black
-        view.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.infoElementSize)
+        view.font = UIFont(name: TitleFonts.spartanFont, size: Metrics.infoElementSize)
         return view
     }()
     

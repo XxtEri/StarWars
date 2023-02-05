@@ -8,6 +8,6 @@
 import Foundation
 
 enum TitleFonts {
-    static let SpartanFont = "Spartan"
-    static let LexendBoldFont = "Lexend-Bold"
+    static let spartanFont = "Spartan"
+    static let lexendBoldFont = "Lexend-Bold"
 }

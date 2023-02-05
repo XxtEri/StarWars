@@ -26,7 +26,7 @@ class CardInfoScreenView: UIView {
         let label = UILabel()
         label.textColor = .yellow
         label.textAlignment = .center
-        label.font = UIFont(name: TitleFonts.SpartanFont, size: Metrics.titleScreenSize)
+        label.font = UIFont(name: TitleFonts.spartanFont, size: Metrics.titleScreenSize)
         
         return label
     }()

@@ -21,5 +21,10 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lexend-Bold.ttf</string>
+		<string>Spartan.ttf</string>
+	</array>
 </dict>
 </plist>

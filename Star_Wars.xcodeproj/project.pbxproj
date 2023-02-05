@@ -7,19 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F347C12C298BB3C80035A90A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C12B298BB3C80035A90A /* Character.swift */; };
+		F347C142298CDAEE0035A90A /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */; };
+		F347C144298CDAF90035A90A /* Spartan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F347C143298CDAF90035A90A /* Spartan.ttf */; };
+		F347C149298CDBE90035A90A /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C148298CDBE90035A90A /* MainRouter.swift */; };
+		F347C14F298CE0050035A90A /* ApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C14E298CE0050035A90A /* ApiRepository.swift */; };
+		F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C150298CE0850035A90A /* FirstScreenViewController.swift */; };
+		F347C153298CE0A00035A90A /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C152298CE0A00035A90A /* FirstScreenView.swift */; };
+		F347C158298CE85C0035A90A /* FirstScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C157298CE85C0035A90A /* FirstScreenPresenter.swift */; };
+		F347C15A298CFD870035A90A /* FirstScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C159298CFD870035A90A /* FirstScreenRouter.swift */; };
+		F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C15B298D03460035A90A /* ScreensFactory.swift */; };
+		F347C15E298D038B0035A90A /* FirstScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */; };
+		F347C161298D07AC0035A90A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C160298D07AC0035A90A /* MainScreenView.swift */; };
+		F347C163298D07C30035A90A /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C162298D07C30035A90A /* MainScreenViewController.swift */; };
+		F347C165298D07DD0035A90A /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C164298D07DD0035A90A /* MainScreenAssembly.swift */; };
+		F347C167298D081F0035A90A /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */; };
+		F347C169298D083D0035A90A /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C168298D083D0035A90A /* MainScreenModel.swift */; };
+		F347C16D298D087A0035A90A /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16C298D087A0035A90A /* MainScreenRouter.swift */; };
+		F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C16E298D088B0035A90A /* MainScreenPresenter.swift */; };
+		F347C172298D34340035A90A /* CardInfoScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C171298D34340035A90A /* CardInfoScreenAssembly.swift */; };
+		F347C174298D344A0035A90A /* CardInfoScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C173298D344A0035A90A /* CardInfoScreenModel.swift */; };
+		F347C176298D345B0035A90A /* CardInfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C175298D345B0035A90A /* CardInfoScreenView.swift */; };
+		F347C178298D346A0035A90A /* CardInfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C177298D346A0035A90A /* CardInfoScreenViewController.swift */; };
+		F347C17A298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C179298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift */; };
+		F347C17C298D34BA0035A90A /* CardInfoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */; };
+		F347C17E298D34C50035A90A /* CardInfoScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */; };
+		F347C180298D3F8C0035A90A /* CardInfoScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */; };
+		F347C183298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C182298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift */; };
+		F347C185298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C184298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift */; };
+		F347C187298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C186298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift */; };
+		F347C189298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */; };
+		F347C18B298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */; };
+		F347C18D298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */; };
+		F347C193298E36CB0035A90A /* TitleFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C192298E36CB0035A90A /* TitleFonts.swift */; };
+		F347C198298F2BC40035A90A /* CardInfoScreenQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347C197298F2BC40035A90A /* CardInfoScreenQuery.swift */; };
+		F37BD722298A529F00D197EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F37BD721298A529F00D197EA /* Alamofire */; };
+		F37BD724298A90EB00D197EA /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD723298A90EB00D197EA /* Film.swift */; };
+		F37BD726298A933700D197EA /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD725298A933700D197EA /* Specie.swift */; };
+		F37BD72A298A947300D197EA /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD729298A947300D197EA /* Planets.swift */; };
+		F37BD72E298A960600D197EA /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD72D298A960600D197EA /* Starship.swift */; };
+		F37BD730298A96D400D197EA /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37BD72F298A96D400D197EA /* Vehicles.swift */; };
 		F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468529868F6E0054C3B3 /* AppDelegate.swift */; };
 		F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */; };
-		F3F6468A29868F6E0054C3B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F6468929868F6E0054C3B3 /* ViewController.swift */; };
 		F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468B29868F6E0054C3B3 /* Main.storyboard */; };
 		F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F6468E29868F700054C3B3 /* Assets.xcassets */; };
 		F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */; };
+		F3F646A629879A590054C3B3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3F646A529879A590054C3B3 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F347C12B298BB3C80035A90A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lexend-Bold.ttf"; path = "../../../../../../../Downloads/Lexend/Lexend-Bold.ttf"; sourceTree = "<group>"; };
+		F347C143298CDAF90035A90A /* Spartan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Spartan.ttf; path = ../../../../../../../Downloads/Spartan/Spartan.ttf; sourceTree = "<group>"; };
+		F347C148298CDBE90035A90A /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		F347C14E298CE0050035A90A /* ApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRepository.swift; sourceTree = "<group>"; };
+		F347C150298CE0850035A90A /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		F347C152298CE0A00035A90A /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+		F347C157298CE85C0035A90A /* FirstScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenPresenter.swift; sourceTree = "<group>"; };
+		F347C159298CFD870035A90A /* FirstScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenRouter.swift; sourceTree = "<group>"; };
+		F347C15B298D03460035A90A /* ScreensFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensFactory.swift; sourceTree = "<group>"; };
+		F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C160298D07AC0035A90A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		F347C162298D07C30035A90A /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		F347C164298D07DD0035A90A /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		F347C168298D083D0035A90A /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		F347C16C298D087A0035A90A /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		F347C16E298D088B0035A90A /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		F347C171298D34340035A90A /* CardInfoScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C173298D344A0035A90A /* CardInfoScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenModel.swift; sourceTree = "<group>"; };
+		F347C175298D345B0035A90A /* CardInfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenView.swift; sourceTree = "<group>"; };
+		F347C177298D346A0035A90A /* CardInfoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenViewController.swift; sourceTree = "<group>"; };
+		F347C179298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenPresenter.swift; sourceTree = "<group>"; };
+		F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenRouter.swift; sourceTree = "<group>"; };
+		F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenInteractor.swift; sourceTree = "<group>"; };
+		F347C182298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenAssembly.swift; sourceTree = "<group>"; };
+		F347C184298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenModel.swift; sourceTree = "<group>"; };
+		F347C186298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenView.swift; sourceTree = "<group>"; };
+		F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenViewController.swift; sourceTree = "<group>"; };
+		F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenPresenter.swift; sourceTree = "<group>"; };
+		F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCategoryDetailsScreenInteractor.swift; sourceTree = "<group>"; };
+		F347C192298E36CB0035A90A /* TitleFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleFonts.swift; path = Star_Wars/Resources/TitleFonts.swift; sourceTree = SOURCE_ROOT; };
+		F347C197298F2BC40035A90A /* CardInfoScreenQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoScreenQuery.swift; sourceTree = "<group>"; };
+		F37BD723298A90EB00D197EA /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		F37BD725298A933700D197EA /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
+		F37BD729298A947300D197EA /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
+		F37BD72D298A960600D197EA /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		F37BD72F298A96D400D197EA /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		F3F6468229868F6E0054C3B3 /* Star_Wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star_Wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F6468529868F6E0054C3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3F6468929868F6E0054C3B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3F6468C29868F6E0054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F6468E29868F700054C3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F6469129868F700054C3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,12 +109,143 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F646A629879A590054C3B3 /* SnapKit in Frameworks */,
+				F37BD722298A529F00D197EA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F347C13A298BF0F50035A90A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F347C143298CDAF90035A90A /* Spartan.ttf */,
+				F347C141298CDAEE0035A90A /* Lexend-Bold.ttf */,
+				F347C192298E36CB0035A90A /* TitleFonts.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		F347C140298CDA9A0035A90A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3F6468E29868F700054C3B3 /* Assets.xcassets */,
+				F347C13A298BF0F50035A90A /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F347C145298CDB0C0035A90A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F347C15B298D03460035A90A /* ScreensFactory.swift */,
+				F3F646A929888BE40054C3B3 /* FirstScreen */,
+				F37BD6FB298A1DC000D197EA /* MainScreen */,
+				F37BD713298A4DB800D197EA /* CardInfoScreen */,
+				F37BD719298A4FFE00D197EA /* ElementCategoryDetailsScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F347C147298CDBC30035A90A /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				F347C148298CDBE90035A90A /* MainRouter.swift */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		F347C14A298CDF2E0035A90A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F347C14B298CDF9C0035A90A /* Api */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F347C14B298CDF9C0035A90A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F347C14C298CDFA50035A90A /* ModelsDTO */,
+				F347C196298F2BA20035A90A /* Query */,
+				F347C14E298CE0050035A90A /* ApiRepository.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		F347C14C298CDFA50035A90A /* ModelsDTO */ = {
+			isa = PBXGroup;
+			children = (
+				F37BD723298A90EB00D197EA /* Film.swift */,
+				F37BD725298A933700D197EA /* Specie.swift */,
+				F37BD72D298A960600D197EA /* Starship.swift */,
+				F37BD72F298A96D400D197EA /* Vehicles.swift */,
+				F347C12B298BB3C80035A90A /* Character.swift */,
+				F37BD729298A947300D197EA /* Planets.swift */,
+			);
+			path = ModelsDTO;
+			sourceTree = "<group>";
+		};
+		F347C196298F2BA20035A90A /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				F347C197298F2BC40035A90A /* CardInfoScreenQuery.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
+		F37BD6FA298A1DA300D197EA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F3F6468529868F6E0054C3B3 /* AppDelegate.swift */,
+				F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F37BD6FB298A1DC000D197EA /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F347C164298D07DD0035A90A /* MainScreenAssembly.swift */,
+				F347C168298D083D0035A90A /* MainScreenModel.swift */,
+				F347C160298D07AC0035A90A /* MainScreenView.swift */,
+				F347C162298D07C30035A90A /* MainScreenViewController.swift */,
+				F347C166298D081F0035A90A /* MainScreenCollectionViewCell.swift */,
+				F347C16E298D088B0035A90A /* MainScreenPresenter.swift */,
+				F347C16C298D087A0035A90A /* MainScreenRouter.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		F37BD713298A4DB800D197EA /* CardInfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F347C171298D34340035A90A /* CardInfoScreenAssembly.swift */,
+				F347C173298D344A0035A90A /* CardInfoScreenModel.swift */,
+				F347C175298D345B0035A90A /* CardInfoScreenView.swift */,
+				F347C177298D346A0035A90A /* CardInfoScreenViewController.swift */,
+				F347C179298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift */,
+				F347C17B298D34BA0035A90A /* CardInfoScreenPresenter.swift */,
+				F347C17D298D34C50035A90A /* CardInfoScreenRouter.swift */,
+				F347C17F298D3F8C0035A90A /* CardInfoScreenInteractor.swift */,
+			);
+			path = CardInfoScreen;
+			sourceTree = "<group>";
+		};
+		F37BD719298A4FFE00D197EA /* ElementCategoryDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F347C182298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift */,
+				F347C184298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift */,
+				F347C186298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift */,
+				F347C188298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift */,
+				F347C18A298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift */,
+				F347C18C298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift */,
+			);
+			path = ElementCategoryDetailsScreen;
+			sourceTree = "<group>";
+		};
 		F3F6467929868F6E0054C3B3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +265,28 @@
 		F3F6468429868F6E0054C3B3 /* Star_Wars */ = {
 			isa = PBXGroup;
 			children = (
-				F3F6468529868F6E0054C3B3 /* AppDelegate.swift */,
-				F3F6468729868F6E0054C3B3 /* SceneDelegate.swift */,
-				F3F6468929868F6E0054C3B3 /* ViewController.swift */,
+				F37BD6FA298A1DA300D197EA /* Application */,
+				F347C147298CDBC30035A90A /* BusinessLogic */,
+				F347C14A298CDF2E0035A90A /* Services */,
+				F347C145298CDB0C0035A90A /* Screens */,
+				F347C140298CDA9A0035A90A /* Resources */,
 				F3F6468B29868F6E0054C3B3 /* Main.storyboard */,
-				F3F6468E29868F700054C3B3 /* Assets.xcassets */,
 				F3F6469029868F700054C3B3 /* LaunchScreen.storyboard */,
 				F3F6469329868F700054C3B3 /* Info.plist */,
 			);
 			path = Star_Wars;
+			sourceTree = "<group>";
+		};
+		F3F646A929888BE40054C3B3 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F347C15D298D038B0035A90A /* FirstScreenAssembly.swift */,
+				F347C152298CE0A00035A90A /* FirstScreenView.swift */,
+				F347C150298CE0850035A90A /* FirstScreenViewController.swift */,
+				F347C157298CE85C0035A90A /* FirstScreenPresenter.swift */,
+				F347C159298CFD870035A90A /* FirstScreenRouter.swift */,
+			);
+			path = FirstScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +305,10 @@
 			dependencies = (
 			);
 			name = Star_Wars;
+			packageProductDependencies = (
+				F3F646A529879A590054C3B3 /* SnapKit */,
+				F37BD721298A529F00D197EA /* Alamofire */,
+			);
 			productName = Star_Wars;
 			productReference = F3F6468229868F6E0054C3B3 /* Star_Wars.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +337,10 @@
 				Base,
 			);
 			mainGroup = F3F6467929868F6E0054C3B3;
+			packageReferences = (
+				F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F37BD720298A529F00D197EA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F3F6468329868F6E0054C3B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F6469229868F700054C3B3 /* LaunchScreen.storyboard in Resources */,
+				F347C142298CDAEE0035A90A /* Lexend-Bold.ttf in Resources */,
+				F347C144298CDAF90035A90A /* Spartan.ttf in Resources */,
 				F3F6468F29868F700054C3B3 /* Assets.xcassets in Resources */,
 				F3F6468D29868F6E0054C3B3 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +370,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F6468A29868F6E0054C3B3 /* ViewController.swift in Sources */,
+				F347C174298D344A0035A90A /* CardInfoScreenModel.swift in Sources */,
+				F37BD72E298A960600D197EA /* Starship.swift in Sources */,
+				F347C14F298CE0050035A90A /* ApiRepository.swift in Sources */,
+				F347C149298CDBE90035A90A /* MainRouter.swift in Sources */,
+				F347C165298D07DD0035A90A /* MainScreenAssembly.swift in Sources */,
+				F347C12C298BB3C80035A90A /* Character.swift in Sources */,
+				F347C198298F2BC40035A90A /* CardInfoScreenQuery.swift in Sources */,
+				F347C183298DEA8C0035A90A /* ElementCategoryDetailsScreenAssembly.swift in Sources */,
+				F347C18B298DEAC60035A90A /* ElementCategoryDetailsScreenPresenter.swift in Sources */,
+				F347C15C298D03460035A90A /* ScreensFactory.swift in Sources */,
+				F347C163298D07C30035A90A /* MainScreenViewController.swift in Sources */,
+				F347C17E298D34C50035A90A /* CardInfoScreenRouter.swift in Sources */,
+				F347C151298CE0850035A90A /* FirstScreenViewController.swift in Sources */,
+				F347C178298D346A0035A90A /* CardInfoScreenViewController.swift in Sources */,
+				F347C193298E36CB0035A90A /* TitleFonts.swift in Sources */,
+				F347C16F298D088B0035A90A /* MainScreenPresenter.swift in Sources */,
+				F37BD730298A96D400D197EA /* Vehicles.swift in Sources */,
+				F347C176298D345B0035A90A /* CardInfoScreenView.swift in Sources */,
+				F347C15A298CFD870035A90A /* FirstScreenRouter.swift in Sources */,
+				F347C167298D081F0035A90A /* MainScreenCollectionViewCell.swift in Sources */,
+				F347C169298D083D0035A90A /* MainScreenModel.swift in Sources */,
+				F347C16D298D087A0035A90A /* MainScreenRouter.swift in Sources */,
+				F37BD72A298A947300D197EA /* Planets.swift in Sources */,
+				F347C172298D34340035A90A /* CardInfoScreenAssembly.swift in Sources */,
+				F347C187298DEAAE0035A90A /* ElementCategoryDetailsScreenView.swift in Sources */,
 				F3F6468629868F6E0054C3B3 /* AppDelegate.swift in Sources */,
+				F347C153298CE0A00035A90A /* FirstScreenView.swift in Sources */,
+				F347C158298CE85C0035A90A /* FirstScreenPresenter.swift in Sources */,
+				F347C15E298D038B0035A90A /* FirstScreenAssembly.swift in Sources */,
+				F347C161298D07AC0035A90A /* MainScreenView.swift in Sources */,
+				F347C180298D3F8C0035A90A /* CardInfoScreenInteractor.swift in Sources */,
 				F3F6468829868F6E0054C3B3 /* SceneDelegate.swift in Sources */,
+				F37BD726298A933700D197EA /* Specie.swift in Sources */,
+				F347C18D298DEAD50035A90A /* ElementCategoryDetailsScreenInteractor.swift in Sources */,
+				F347C17A298D349E0035A90A /* CardInfoScreenCollectionViewCell.swift in Sources */,
+				F37BD724298A90EB00D197EA /* Film.swift in Sources */,
+				F347C189298DEABB0035A90A /* ElementCategoryDetailsScreenViewController.swift in Sources */,
+				F347C17C298D34BA0035A90A /* CardInfoScreenPresenter.swift in Sources */,
+				F347C185298DEA9C0035A90A /* ElementCategoryDetailsScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +561,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +572,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "shift.Star-Wars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +594,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +605,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "shift.Star-Wars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +636,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F37BD720298A529F00D197EA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F37BD721298A529F00D197EA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F37BD720298A529F00D197EA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F3F646A529879A590054C3B3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3F646A429879A590054C3B3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3F6467A29868F6E0054C3B3 /* Project object */;
 }

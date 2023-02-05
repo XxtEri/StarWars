@@ -40,7 +40,7 @@ extension ApiRepository: IApiRepository {
     func loadFilmsList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoFilms, Error>) -> Void) {
         self.session.request(self.baseURL + "films",
                              method: .get,
-                             parameters: nil).responseDecodable(of: InfoFilms.self) { response in
+                             parameters: query).responseDecodable(of: InfoFilms.self) { response in
             if let request = response.request {
                 print("Request: \(request)")
             }
@@ -70,7 +70,7 @@ extension ApiRepository: IApiRepository {
     func loadCharacterList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoCharacters, Error>) -> Void) {
         self.session.request(self.baseURL + "people",
                              method: .get,
-                             parameters: nil).responseDecodable(of: InfoCharacters.self) { response in
+                             parameters: query).responseDecodable(of: InfoCharacters.self) { response in
             if let request = response.request {
                 
                 print("Request: \(request)")
@@ -101,7 +101,7 @@ extension ApiRepository: IApiRepository {
     func loadStarshipsList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoStarships, Error>) -> Void) {
         self.session.request(self.baseURL + "starships",
                              method: .get,
-                             parameters: nil).responseDecodable(of: InfoStarships.self) { response in
+                             parameters: query).responseDecodable(of: InfoStarships.self) { response in
             if let request = response.request {
                 
                 print("Request: \(request)")
@@ -132,7 +132,7 @@ extension ApiRepository: IApiRepository {
     func loadVehiclesList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoVehicles, Error>) -> Void) {
         self.session.request(self.baseURL + "vehicles",
                              method: .get,
-                             parameters: nil).responseDecodable(of: InfoVehicles.self) { response in
+                             parameters: query).responseDecodable(of: InfoVehicles.self) { response in
             if let request = response.request {
                 
                 print("Request: \(request)")
@@ -163,7 +163,7 @@ extension ApiRepository: IApiRepository {
     func loadPlanetsList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoPlanets, Error>) -> Void) {
         self.session.request(self.baseURL + "planets",
                              method: .get,
-                             parameters: nil).responseDecodable(of: InfoPlanets.self) { response in
+                             parameters: query).responseDecodable(of: InfoPlanets.self) { response in
             if let request = response.request {
                 
                 print("Request: \(request)")
@@ -194,7 +194,7 @@ extension ApiRepository: IApiRepository {
     func loadSpeciesList(query: CardInfoScreenQuery? = nil, completion: @escaping (Result<InfoSpecies, Error>) -> Void) {
         self.session.request(self.baseURL + "species",
                              method: .get,
-                             parameters: nil).responseDecodable(of: InfoSpecies.self) { response in
+                             parameters: query).responseDecodable(of: InfoSpecies.self) { response in
             if let request = response.request {
                 
                 print("Request: \(request)")
